@@ -20,5 +20,58 @@
     "raw_branch_net_sales_egp": 10189278.32,
     "pnl_net_sales_egp": 10189278.32,
     "total_contribution_profit_egp": 1836358.29
+  },
+  "extended_case_studies": {
+    "case_study_3_d365_gl_and_consignment": {
+      "status": "PASSED",
+      "gl_posting_rows": 1080,
+      "legal_entities": [
+        "EG01",
+        "KSA1"
+      ],
+      "gl_debit_egp": 38766373.8,
+      "gl_credit_egp": 38766373.8,
+      "gl_trial_balance_drift_egp": 0.0,
+      "consignment_skus_audited": 40,
+      "consignment_exceptions_held": 13,
+      "consignment_vendor_claim_egp": 969582.05,
+      "consignment_authorized_payable_egp": 934049.0,
+      "consignment_blocked_overclaim_egp": 35533.05,
+      "workbook_bytes": 16856
+    },
+    "case_study_4_aggregator_sync_and_produce": {
+      "status": "PASSED",
+      "sftp_cadence_minutes": 90,
+      "aggregator_skus_evaluated": 32,
+      "published_to_sftp_count": 22,
+      "anomalies_blocked_total": 10,
+      "negative_stock_blocked": 4,
+      "stale_sla_held": 3,
+      "safety_buffer_suppressed": 3,
+      "oversell_penalty_exposure_prevented_egp": 1085.0,
+      "produce_lines_audited": 24,
+      "produce_critical_shrinkage_alerts": 5,
+      "produce_bulk_input_kg": 7301.33,
+      "produce_accounted_kg": 7301.33,
+      "produce_mass_balance_drift_kg": 0.0,
+      "produce_unexplained_shrinkage_egp": 7291.01,
+      "workbook_bytes": 15798
+    },
+    "case_study_5_promo_roi_and_dax_benchmark": {
+      "status": "PASSED",
+      "promo_skus_audited": 60,
+      "magazine_cycles_count": 3,
+      "total_promo_sales_egp": 4784281.52,
+      "total_vendor_rebates_egp": 529844.45,
+      "net_incremental_profit_lift_egp": 98388.45,
+      "value_destroying_promos_count": 14,
+      "value_destroying_erosion_egp": 75485.28,
+      "benchmark_rows_tested": 30000,
+      "benchmark_slow_ms": 8.7,
+      "benchmark_fast_ms": 2.46,
+      "benchmark_speedup_pct": 71.72,
+      "benchmark_numerical_drift_egp": 0.0,
+      "workbook_bytes": 12828
+    }
   }
 }

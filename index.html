@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yahia Hosny — Retail Finance, 3-Way Matching &amp; D365 F&amp;O Automation Portfolio</title>
-  <meta name="description" content="Interactive Portfolio by Yahia Hosny: Multi-Branch & Delivery Channel P&L (10.19M EGP Synthetic Benchmark), 3-Way Match PO-GRN-Invoice Audit (110.3k EGP Exposure Caught), and D365 F&O BYOD/OData Automation." />
+  <title>Yahia Hosny — Retail Finance, 3-Way Matching &amp; D365 F&amp;O Automation Portfolio (5 Case Studies)</title>
+  <meta name="description" content="5-Case-Study Interactive Portfolio by Yahia Hosny: Branch & Delivery P&L, 3-Way Match Audit, D365 F&O Multi-Entity GL & Consignment Settlement, 1.5h SFTP Inventory Gate, and Promo ROI / DAX Optimization." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yahia-hosny.github.io/" />
-  <meta property="og:title" content="Retail Finance, 3-Way Matching & D365 F&O Automation — Portfolio Showcase" />
-  <meta property="og:description" content="Explore live Branch & Delivery P&L analytics, 38 flagged 3-Way Match procurement exceptions (0.00 tie-out drift), D365 F&O BYOD architecture, and downloadable Excel executive workbooks." />
+  <meta property="og:title" content="Retail Finance, 3-Way Matching & D365 F&O Automation — 5-Case-Study Portfolio" />
+  <meta property="og:description" content="Explore live Branch & Delivery P&L analytics, 38 flagged 3-Way Match exceptions, D365 Multi-Entity GL & Consignment controls, 1.5h Aggregator SFTP sync, and 5 downloadable Excel executive workbooks." />
   <meta property="og:image" content="https://yahia-hosny.github.io/visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Retail Finance & D365 F&O Automation — Interactive Portfolio" />
-  <meta name="twitter:description" content="Built by Yahia Hosny | 100% Synthetic Retail Benchmark | Downloadable Excel Dashboards & Live 3-Way Match Audit." />
+  <meta name="twitter:title" content="Retail Finance & D365 F&O Automation — 5-Case-Study Interactive Portfolio" />
+  <meta name="twitter:description" content="Built by Yahia Hosny | 100% Synthetic Retail Benchmarks | 5 Downloadable Excel Workbooks & 6 High-Res Dashboards." />
   <meta name="twitter:image" content="https://yahia-hosny.github.io/visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" />
   <style>
     :root {
@@ -624,7 +624,7 @@
       border-top: 1px solid var(--grid-line);
     }
 
-    /* Action Bar & Showcase Visual Gallery */
+    /* Action Bar, Case Studies Grid & Showcase Visual Gallery */
     .action-strip {
       display: flex;
       flex-wrap: wrap;
@@ -642,19 +642,19 @@
     .action-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       align-items: center;
     }
 
     .btn-dl {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 12.2px;
       font-weight: 700;
-      padding: 8px 14px;
-      border-radius: 8px;
+      padding: 7px 12px;
+      border-radius: 7px;
       border: 1px solid var(--blue);
       background-color: var(--blue-soft);
       color: var(--blue-text);
@@ -682,10 +682,10 @@
       align-items: center;
       gap: 6px;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
-      padding: 8px 16px;
-      border-radius: 8px;
+      padding: 8px 15px;
+      border-radius: 7px;
       background-color: var(--navy-dark);
       color: #FFFFFF;
       border: 1px solid var(--navy-dark);
@@ -695,6 +695,66 @@
     .btn-cta:hover {
       background-color: var(--blue);
       border-color: var(--blue);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 1080px) {
+      .case-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .case-card {
+      border: 1px solid var(--grid-line);
+      border-top: 4px solid var(--emerald);
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .case-card.blue { border-top-color: var(--blue); }
+    .case-card.crimson { border-top-color: var(--crimson); }
+    .case-card.amber { border-top-color: var(--amber); }
+
+    .case-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .case-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-top: 3px;
+    }
+
+    .case-metrics {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .case-metrics strong {
+      color: var(--text-dark);
     }
 
     .gallery-grid {
@@ -760,12 +820,15 @@
   </header>
 
   <main class="container">
-    <!-- Action Strip: Excel Deliverables & Contact -->
+    <!-- Action Strip: 5 Excel Deliverables & Contact -->
     <section class="action-strip" aria-label="Downloads and Contact">
       <div class="action-group">
-        <a class="btn-dl emerald" href="downloads/Portfolio_1_Retail_Branch_Delivery_PnL_Dashboard.xlsx" download>Download Excel 1: Branch &amp; Delivery P&amp;L (.xlsx)</a>
-        <a class="btn-dl" href="downloads/Portfolio_2_Three_Way_Match_PO_GRN_Invoice_Audit.xlsx" download>Download Excel 2: 3-Way Match Audit (.xlsx)</a>
-        <a class="btn-dl" href="downloads/audit_verification_report.json" target="_blank" rel="noopener noreferrer">View Tie-Out JSON</a>
+        <a class="btn-dl emerald" href="downloads/Portfolio_1_Retail_Branch_Delivery_PnL_Dashboard.xlsx" download>1. Branch P&amp;L (.xlsx)</a>
+        <a class="btn-dl" href="downloads/Portfolio_2_Three_Way_Match_PO_GRN_Invoice_Audit.xlsx" download>2. 3-Way Match (.xlsx)</a>
+        <a class="btn-dl emerald" href="downloads/Portfolio_3_D365_GL_TrialBalance_&_Consignment_Settlement.xlsx" download>3. D365 GL &amp; Consign (.xlsx)</a>
+        <a class="btn-dl" href="downloads/Portfolio_4_Aggregator_Inventory_Sync_&_Produce_Control.xlsx" download>4. 1.5h SFTP &amp; Produce (.xlsx)</a>
+        <a class="btn-dl emerald" href="downloads/Portfolio_5_Promo_Cycle_ROI_&_PowerBI_StarSchema.xlsx" download>5. Promo ROI &amp; DAX (.xlsx)</a>
+        <a class="btn-dl" href="downloads/audit_verification_report.json" target="_blank" rel="noopener noreferrer">Audit JSON</a>
       </div>
       <div class="action-group">
         <a class="btn-cta" href="https://www.linkedin.com/in/yahia-hosny" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
@@ -806,7 +869,7 @@
       <button class="tab-btn active" data-tab="tab-pnl" onclick="switchTab('tab-pnl', this)">Branch &amp; Delivery P&amp;L</button>
       <button class="tab-btn" data-tab="tab-match" onclick="switchTab('tab-match', this)">3-Way Match Audit</button>
       <button class="tab-btn" data-tab="tab-arch" onclick="switchTab('tab-arch', this)">D365 F&amp;O Architecture</button>
-      <button class="tab-btn" data-tab="tab-gallery" onclick="switchTab('tab-gallery', this)">Executive Visuals &amp; Case Studies</button>
+      <button class="tab-btn" data-tab="tab-cases" onclick="switchTab('tab-cases', this)">5 Case Studies &amp; Visuals (6)</button>
     </nav>
 
     <!-- TAB 1: BRANCH & DELIVERY P&L -->
@@ -1029,16 +1092,92 @@
       </div>
     </section>
 
-    <!-- TAB 4: EXECUTIVE VISUALS & CASE STUDIES -->
-    <section id="tab-gallery" class="tab-panel">
+    <!-- TAB 4: 5 CASE STUDIES & EXECUTIVE VISUALS -->
+    <section id="tab-cases" class="tab-panel">
       <div class="panel">
         <div class="panel-header">
           <div>
-            <div class="panel-title">Executive Portfolio Visuals &amp; Architecture Diagrams</div>
-            <div class="panel-subtitle">High-resolution 1600x1000 snapshots built from the 100% synthetic retail benchmark dataset. Click any image to inspect full screen.</div>
+            <div class="panel-title">5 Production Case Studies — Verified Controls &amp; Downloadable Deliverables</div>
+            <div class="panel-subtitle">Each module enforces programmatic raw-vs-reconciled tie-outs (&lt; 0.01 drift) over 100% synthetic retail &amp; D365 F&amp;O benchmark datasets.</div>
           </div>
-          <a class="btn-dl emerald" href="downloads/Portfolio_1_Retail_Branch_Delivery_PnL_Dashboard.xlsx" download>Get Both .xlsx Workbooks</a>
+          <a class="btn-dl emerald" href="downloads/audit_verification_report.json" target="_blank" rel="noopener noreferrer">Inspect Master Audit JSON</a>
         </div>
+
+        <div class="case-grid">
+          <div class="case-card blue">
+            <div>
+              <div class="case-tag">Case Study 01 — Retail Finance</div>
+              <div class="case-title">Multi-Branch &amp; Delivery Channel P&amp;L</div>
+              <div class="case-metrics">
+                Audited <strong>12,000 transactions</strong> across 4 branches (<strong>10,189,278.32 EGP</strong> Net Sales; <strong>1,836,358.29 EGP</strong> Contribution Profit). Exposes 14% aggregator commission compressing margin to 7.53% vs 21.58% In-Store.
+              </div>
+            </div>
+            <a class="btn-dl" href="downloads/Portfolio_1_Retail_Branch_Delivery_PnL_Dashboard.xlsx" download>Download Excel Workbook 1</a>
+          </div>
+
+          <div class="case-card crimson">
+            <div>
+              <div class="case-tag">Case Study 02 — Procurement Audit</div>
+              <div class="case-title">Three-Way Match (PO vs. GRN vs. Invoice)</div>
+              <div class="case-metrics">
+                Pre-aggregates to <strong>122 (PO, SKU)</strong> keys via SQL CTEs before joining, verifying <strong>24 clean split GRN/Invoice matches</strong> at 0.00 fan-out and isolating <strong>38 exceptions</strong> totaling <strong>110,315.01 EGP</strong> exposure.
+              </div>
+            </div>
+            <a class="btn-dl" href="downloads/Portfolio_2_Three_Way_Match_PO_GRN_Invoice_Audit.xlsx" download>Download Excel Workbook 2</a>
+          </div>
+
+          <div class="case-card">
+            <div>
+              <div class="case-tag">Case Study 03 — D365 F&amp;O &amp; Consignment</div>
+              <div class="case-title">Multi-Entity Trial Balance &amp; Consignment</div>
+              <div class="case-metrics">
+                Flattens <strong>1,080 D365 GL rows</strong> across composite <strong>EG01 + KSA1</strong> entities (<strong>38,766,373.80 EGP</strong> Debits = Credits, 0.00 drift) and holds <strong>35,533.05 EGP</strong> across <strong>13</strong> phantom consignment overclaims.
+              </div>
+            </div>
+            <a class="btn-dl emerald" href="downloads/Portfolio_3_D365_GL_TrialBalance_&_Consignment_Settlement.xlsx" download>Download Excel Workbook 3</a>
+          </div>
+
+          <div class="case-card amber">
+            <div>
+              <div class="case-tag">Case Study 04 — E-Commerce &amp; Fresh Control</div>
+              <div class="case-title">1.5h SFTP Stock Gate &amp; Produce Mass Balance</div>
+              <div class="case-metrics">
+                Quarantines <strong>10 anomalies</strong> (negative ERP lag, stale &gt;90m SLA, safety buffer) before aggregator SFTP dispatch and reconciles <strong>7,301.33 kg</strong> bulk-vs-packaged produce at <strong>0.00 kg</strong> mass drift.
+              </div>
+            </div>
+            <a class="btn-dl" href="downloads/Portfolio_4_Aggregator_Inventory_Sync_&_Produce_Control.xlsx" download>Download Excel Workbook 4</a>
+          </div>
+
+          <div class="case-card">
+            <div>
+              <div class="case-tag">Case Study 05 — Commercial ROI &amp; BI Speed</div>
+              <div class="case-title">Promo Magazine ROI &amp; Star-Schema Speedup</div>
+              <div class="case-metrics">
+                Flags <strong>14 value-destroying promo SKUs</strong> (<strong>75,485.28 EGP</strong> erosion after vendor rebates &amp; post-dip) and proves a <strong>71.7% query speedup</strong> across 30,000 rows at 0.00 drift.
+              </div>
+            </div>
+            <a class="btn-dl emerald" href="downloads/Portfolio_5_Promo_Cycle_ROI_&_PowerBI_StarSchema.xlsx" download>Download Excel Workbook 5</a>
+          </div>
+
+          <div class="case-card blue">
+            <div>
+              <div class="case-tag">Zero-IP Leakage Guarantee</div>
+              <div class="case-title">How Code Security Works on This Portal</div>
+              <div class="case-metrics">
+                This live showcase publishes strictly interactive dashboards, PNG architecture blueprints, and Excel deliverables (<strong>0 .py source files</strong>). All production Python/SQL scripts remain secured inside private repositories.
+              </div>
+            </div>
+            <a class="btn-cta" href="https://www.linkedin.com/in/yahia-hosny" target="_blank" rel="noopener noreferrer">Request Custom Scoping</a>
+          </div>
+        </div>
+
+        <div class="panel-header" style="margin-top: 8px;">
+          <div>
+            <div class="panel-title">Executive Visual Gallery (6 High-Resolution 1600x1000 Assets)</div>
+            <div class="panel-subtitle">Click any PNG card to inspect full-screen charts, D365 F&amp;O architecture diagrams, and control tie-out summaries.</div>
+          </div>
+        </div>
+
         <div class="gallery-grid">
           <div class="visual-card">
             <a href="visuals/01_Retail_Branch_Delivery_PnL_Dashboard.png" target="_blank" rel="noopener noreferrer">
@@ -1065,13 +1204,37 @@
             </div>
           </div>
           <div class="visual-card">
+            <a href="visuals/05_D365_GL_TrialBalance_&_Consignment_Audit.png" target="_blank" rel="noopener noreferrer">
+              <img src="visuals/05_D365_GL_TrialBalance_&_Consignment_Audit.png" alt="D365 GL Multi-Entity Trial Balance and Consignment Audit" loading="lazy" />
+            </a>
+            <div class="visual-card-body">
+              <div>
+                <div class="visual-card-title">03. D365 F&amp;O Multi-Entity GL &amp; Consignment</div>
+                <div class="visual-card-sub">38.77M EGP Balanced GL | 35,533.05 EGP Overclaims Held</div>
+              </div>
+              <a class="btn-dl" href="visuals/05_D365_GL_TrialBalance_&_Consignment_Audit.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
+            </div>
+          </div>
+          <div class="visual-card">
+            <a href="visuals/06_Aggregator_1_5h_Sync_&_Produce_Control.png" target="_blank" rel="noopener noreferrer">
+              <img src="visuals/06_Aggregator_1_5h_Sync_&_Produce_Control.png" alt="1.5h Aggregator SFTP Sync, Produce Mass Balance and Promo ROI" loading="lazy" />
+            </a>
+            <div class="visual-card-body">
+              <div>
+                <div class="visual-card-title">04. 1.5h SFTP Sync, Produce &amp; Promo ROI</div>
+                <div class="visual-card-sub">0.00 kg Mass Drift | 71.7% Star-Schema Query Speedup</div>
+              </div>
+              <a class="btn-dl" href="visuals/06_Aggregator_1_5h_Sync_&_Produce_Control.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
+            </div>
+          </div>
+          <div class="visual-card">
             <a href="visuals/03_D365_FO_OData_BYOD_Pipeline_Architecture.png" target="_blank" rel="noopener noreferrer">
               <img src="visuals/03_D365_FO_OData_BYOD_Pipeline_Architecture.png" alt="D365 F&O OData BYOD Python SFTP Architecture" loading="lazy" />
             </a>
             <div class="visual-card-body">
               <div>
-                <div class="visual-card-title">03. D365 F&amp;O + MS Graph + SFTP Pipeline</div>
-                <div class="visual-card-sub">1.5h Automated Stock Sync | 60% Power BI Query Speedup</div>
+                <div class="visual-card-title">05. D365 F&amp;O + MS Graph + SFTP Architecture</div>
+                <div class="visual-card-sub">End-to-End Automated Ingestion, Tie-Out Gate &amp; Delivery</div>
               </div>
               <a class="btn-dl" href="visuals/03_D365_FO_OData_BYOD_Pipeline_Architecture.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
             </div>
@@ -1082,7 +1245,7 @@
             </a>
             <div class="visual-card-body">
               <div>
-                <div class="visual-card-title">04. Consulting &amp; Automation Scope Overview</div>
+                <div class="visual-card-title">06. Consulting &amp; Automation Scope Banner</div>
                 <div class="visual-card-sub">D365 F&amp;O (OData / BYOD) | Python Polars &amp; DuckDB | Excel &amp; Power BI</div>
               </div>
               <a class="btn-dl" href="visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
@@ -1093,14 +1256,14 @@
     </section>
 
     <footer class="footer">
-      Live Interactive Portfolio Showcase &bull; Built by Yahia Hosny &bull; 100% Synthetic Benchmark Dataset &bull; Core Proprietary Automation Code Kept Private
+      Live 5-Case-Study Interactive Showcase &bull; Built by Yahia Hosny &bull; 100% Synthetic Benchmark Datasets &bull; Core Proprietary Automation Code Kept Private
     </footer>
   </main>
 
   <script>
     const PNL_CSV = "branch_id,branch_name,channel,txn_count,total_units,gross_sales_egp,discount_egp,net_sales_egp,cogs_egp,waste_egp,aggregator_commission_egp,delivery_cost_egp,contribution_profit_egp,contribution_margin_pct\nBR-01,Dokki,In-Store,2108,12932.0,1901772.76,37886.09,1863886.67,1447498.01,12755.58,0.0,0.0,403633.08,21.66\nBR-01,Dokki,Own-Delivery,509,3155.0,470016.28,9705.86,460310.42,358628.07,2866.14,0.0,8655.07,90161.14,19.59\nBR-01,Dokki,Aggregator-App,793,4766.0,698716.38,34986.35,663730.03,517835.26,4606.73,92922.28,0.0,48365.76,7.29\nBR-02,Nasr City,In-Store,1958,11565.0,1684997.28,32349.82,1652647.46,1282379.56,11193.91,0.0,0.0,359073.99,21.73\nBR-02,Nasr City,Own-Delivery,488,2930.0,418329.2,8333.34,409995.86,317078.95,2879.0,0.0,8284.79,81753.12,19.94\nBR-02,Nasr City,Aggregator-App,762,4583.0,664128.04,33516.81,630611.23,489234.18,4677.43,88285.61,0.0,48414.01,7.68\nBR-03,New Cairo,In-Store,1859,11036.0,1576316.3,31447.11,1544869.19,1206909.56,9398.3,0.0,0.0,328561.33,21.27\nBR-03,New Cairo,Own-Delivery,441,2637.0,383001.42,7575.34,375426.08,291796.43,2693.58,0.0,7490.36,73445.71,19.56\nBR-03,New Cairo,Aggregator-App,736,4516.0,629411.16,31357.22,598053.94,465560.85,4046.88,83727.67,0.0,44718.54,7.48\nBR-04,Alexandria,In-Store,1409,8468.0,1225520.74,24098.12,1201422.62,933359.87,7987.2,0.0,0.0,260075.55,21.65\nBR-04,Alexandria,Own-Delivery,359,2214.0,324477.58,6555.28,317922.3,248019.39,2164.5,0.0,6077.36,61661.05,19.4\nBR-04,Alexandria,Aggregator-App,578,3459.0,495391.9,24989.38,470402.52,364720.21,3331.0,65856.3,0.0,36495.01,7.76\n";
     const EXC_CSV = "po_number,sku,vendor_id,vendor_name,item_name,has_po,has_grn,has_invoice,po_qty,po_unit_price,po_total_amount,received_qty,grn_count,invoiced_qty,invoiced_unit_price,invoiced_amount,invoice_count,qty_variance_inv_vs_grn,unit_price_variance,financial_exposure_egp,match_status\nPO-2026-0006,SKU-1004,V-102,Delta Dairy & Cold Chain,Arabica Coffee 200g,1,0,1,67.0,249.13,16691.71,0.0,0,67.0,249.13,16691.71,1,67.0,0.0,16691.71,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0003,SKU-1005,V-103,Oasis Dry Goods Co.,Cheddar Cheese 500g,1,0,1,69.0,160.6,11081.4,0.0,0,69.0,160.6,11081.4,1,69.0,0.0,11081.4,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0009,SKU-1005,V-101,Al-Nile FMCG Distribution,Cheddar Cheese 500g,1,0,1,60.0,167.09,10025.4,0.0,0,60.0,167.09,10025.4,1,60.0,0.0,10025.4,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0022,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,0,1,63.0,109.22,6880.86,0.0,0,63.0,109.22,6880.86,1,63.0,0.0,6880.86,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0002,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,0,1,60.0,112.12,6727.2,0.0,0,60.0,112.12,6727.2,1,60.0,0.0,6727.2,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0013,SKU-1002,V-101,Al-Nile FMCG Distribution,Basmati Rice 1Kg,1,0,1,82.0,77.61,6364.02,0.0,0,82.0,77.61,6364.02,1,82.0,0.0,6364.02,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0026,SKU-1006,V-102,Delta Dairy & Cold Chain,Bottled Water 1.5L Pack,1,0,1,96.0,59.28,5690.88,0.0,0,96.0,59.28,5690.88,1,96.0,0.0,5690.88,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0026,SKU-1004,V-102,Delta Dairy & Cold Chain,Arabica Coffee 200g,1,1,1,99.0,245.45,24299.55,79.2,1,99.0,245.45,24299.55,1,19.8,0.0,4859.91,QTY_OVER_BILLED_VS_GRN\nPO-2026-0009,SKU-1004,V-101,Al-Nile FMCG Distribution,Arabica Coffee 200g,1,1,1,98.0,247.42,24247.16,78.4,1,98.0,247.42,24247.16,1,19.6,0.0,4849.432,QTY_OVER_BILLED_VS_GRN\nPO-2026-0012,SKU-1005,V-104,Metro Fresh Produce,Cheddar Cheese 500g,1,0,1,27.0,167.96,4534.92,0.0,0,27.0,167.96,4534.92,1,27.0,0.0,4534.92,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0019,SKU-1002,V-103,Oasis Dry Goods Co.,Basmati Rice 1Kg,1,0,1,49.0,80.3,3934.7,0.0,0,49.0,80.3,3934.7,1,49.0,0.0,3934.7,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0023,SKU-1006,V-103,Oasis Dry Goods Co.,Bottled Water 1.5L Pack,1,0,1,63.0,59.49,3747.87,0.0,0,63.0,59.49,3747.87,1,63.0,0.0,3747.87,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0010,SKU-1004,V-102,Delta Dairy & Cold Chain,Arabica Coffee 200g,1,1,1,64.0,242.08,15493.12,51.2,1,64.0,242.08,15493.12,1,12.8,0.0,3098.624,QTY_OVER_BILLED_VS_GRN\nPO-UNAUTH-9002,SKU-1004,V-103,Unregistered / Orphan PO,Unmapped Item,0,0,1,0.0,0.0,0.0,0.0,0,12.0,250.0,3000.0,1,12.0,250.0,3000.0,ORPHAN_INVOICE_NO_PO\nPO-UNAUTH-9001,SKU-1001,V-101,Unregistered / Orphan PO,Unmapped Item,0,0,1,0.0,0.0,0.0,0.0,0,25.0,115.0,2875.0,1,25.0,115.0,2875.0,ORPHAN_INVOICE_NO_PO\nPO-2026-0029,SKU-1006,V-101,Al-Nile FMCG Distribution,Bottled Water 1.5L Pack,1,0,1,39.0,56.45,2201.55,0.0,0,39.0,56.45,2201.55,1,39.0,0.0,2201.55,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0016,SKU-1003,V-104,Metro Fresh Produce,Full Cream Milk 1L,1,0,1,48.0,42.06,2018.88,0.0,0,48.0,42.06,2018.88,1,48.0,0.0,2018.88,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0016,SKU-1004,V-104,Metro Fresh Produce,Arabica Coffee 200g,1,1,1,115.0,245.3,28209.5,115.0,1,115.0,260.02,29902.3,1,0.0,14.72,1692.8,PRICE_OVERCHARGE_VS_PO\nPO-2026-0020,SKU-1005,V-104,Metro Fresh Produce,Cheddar Cheese 500g,1,1,1,29.0,161.66,4688.14,23.2,1,29.0,161.66,4688.14,1,5.8,0.0,937.628,QTY_OVER_BILLED_VS_GRN\nPO-2026-0016,SKU-1002,V-104,Metro Fresh Produce,Basmati Rice 1Kg,1,1,1,53.0,77.71,4118.63,42.4,1,53.0,77.71,4118.63,1,10.6,0.0,823.726,QTY_OVER_BILLED_VS_GRN\nPO-2026-0003,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,97.0,41.17,3993.49,77.6,1,97.0,41.17,3993.49,1,19.4,0.0,798.698,QTY_OVER_BILLED_VS_GRN\nPO-2026-0020,SKU-1001,V-104,Metro Fresh Produce,Sunflower Oil 1.5L,1,1,1,108.0,114.17,12330.36,108.0,1,108.0,121.02,13070.16,1,0.0,6.85,739.8,PRICE_OVERCHARGE_VS_PO\nPO-2026-0023,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,91.0,40.34,3670.94,72.8,1,91.0,40.34,3670.94,1,18.2,0.0,734.188,QTY_OVER_BILLED_VS_GRN\nPO-2026-0006,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,1,1,100.0,114.44,11444.0,100.0,1,100.0,121.31,12131.0,1,0.0,6.87,687.0,PRICE_OVERCHARGE_VS_PO\nPO-2026-0013,SKU-1003,V-101,Al-Nile FMCG Distribution,Full Cream Milk 1L,1,1,1,82.0,41.62,3412.84,65.6,1,82.0,41.62,3412.84,1,16.4,0.0,682.568,QTY_OVER_BILLED_VS_GRN\nPO-2026-0010,SKU-1005,V-102,Delta Dairy & Cold Chain,Cheddar Cheese 500g,1,1,1,69.0,162.83,11235.27,69.0,1,69.0,172.6,11909.4,1,0.0,9.77,674.13,PRICE_OVERCHARGE_VS_PO\nPO-2026-0030,SKU-1002,V-102,Delta Dairy & Cold Chain,Basmati Rice 1Kg,1,1,1,43.0,78.33,3368.19,34.4,1,43.0,78.33,3368.19,1,8.6,0.0,673.638,QTY_OVER_BILLED_VS_GRN\nPO-2026-0003,SKU-1001,V-103,Oasis Dry Goods Co.,Sunflower Oil 1.5L,1,1,1,87.0,110.44,9608.28,87.0,1,87.0,117.07,10185.09,1,0.0,6.63,576.81,PRICE_OVERCHARGE_VS_PO\nPO-2026-0030,SKU-1006,V-102,Delta Dairy & Cold Chain,Bottled Water 1.5L Pack,1,1,1,108.0,57.13,6170.04,108.0,1,108.0,60.56,6540.48,1,0.0,3.43,370.44,PRICE_OVERCHARGE_VS_PO\nPO-2026-0017,SKU-1001,V-101,Al-Nile FMCG Distribution,Sunflower Oil 1.5L,1,1,1,52.0,115.31,5996.12,52.0,1,52.0,122.23,6355.96,1,0.0,6.92,359.84,PRICE_OVERCHARGE_VS_PO\nPO-2026-0007,SKU-1002,V-103,Oasis Dry Goods Co.,Basmati Rice 1Kg,1,1,1,76.0,78.28,5949.28,76.0,1,76.0,82.98,6306.48,1,0.0,4.7,357.2,PRICE_OVERCHARGE_VS_PO\nPO-2026-0027,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,119.0,42.03,5001.57,119.0,1,119.0,44.55,5301.45,1,0.0,2.52,299.88,PRICE_OVERCHARGE_VS_PO\nPO-2026-0026,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,1,1,45.0,110.7,4981.5,45.0,1,45.0,117.34,5280.3,1,0.0,6.64,298.8,PRICE_OVERCHARGE_VS_PO\nPO-2026-0019,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,36.0,40.12,1444.32,28.8,1,36.0,40.12,1444.32,1,7.2,0.0,288.864,QTY_OVER_BILLED_VS_GRN\nPO-2026-0006,SKU-1006,V-102,Delta Dairy & Cold Chain,Bottled Water 1.5L Pack,1,1,1,20.0,58.57,1171.4,16.0,1,20.0,58.57,1171.4,1,4.0,0.0,234.28,QTY_OVER_BILLED_VS_GRN\nPO-2026-0029,SKU-1003,V-101,Al-Nile FMCG Distribution,Full Cream Milk 1L,1,1,1,22.0,40.15,883.3,17.6,1,22.0,40.15,883.3,1,4.4,0.0,176.66,QTY_OVER_BILLED_VS_GRN\nPO-2026-0013,SKU-1006,V-101,Al-Nile FMCG Distribution,Bottled Water 1.5L Pack,1,1,1,50.0,58.29,2914.5,50.0,1,50.0,61.79,3089.5,1,0.0,3.5,175.0,PRICE_OVERCHARGE_VS_PO\nPO-2026-0023,SKU-1001,V-103,Oasis Dry Goods Co.,Sunflower Oil 1.5L,1,1,1,22.0,114.11,2510.42,22.0,1,22.0,120.96,2661.12,1,0.0,6.85,150.7,PRICE_OVERCHARGE_VS_PO\n";
-    const AUDIT_DATA = {"status": "PASSED", "unique_po_sku_keys": 122, "split_grn_inv_clean_matches_verified": 24, "total_exceptions_detected": 38, "exception_breakdown": {"UNRECEIPTED_INVOICE_NO_GRN": 12, "QTY_OVER_BILLED_VS_GRN": 12, "PRICE_OVERCHARGE_VS_PO": 12, "ORPHAN_INVOICE_NO_PO": 2}, "total_financial_exposure_egp": 110315.01, "tie_out_checks": {"raw_po_value_egp": 963477.91, "reconciled_po_value_egp": 963477.91, "raw_grn_qty": 7392.2, "reconciled_grn_qty": 7392.2, "raw_invoice_value_egp": 975735.31, "reconciled_invoice_value_egp": 975735.31, "raw_branch_net_sales_egp": 10189278.32, "pnl_net_sales_egp": 10189278.32, "total_contribution_profit_egp": 1836358.29}};
+    const AUDIT_DATA = {"status": "PASSED", "unique_po_sku_keys": 122, "split_grn_inv_clean_matches_verified": 24, "total_exceptions_detected": 38, "exception_breakdown": {"UNRECEIPTED_INVOICE_NO_GRN": 12, "QTY_OVER_BILLED_VS_GRN": 12, "PRICE_OVERCHARGE_VS_PO": 12, "ORPHAN_INVOICE_NO_PO": 2}, "total_financial_exposure_egp": 110315.01, "tie_out_checks": {"raw_po_value_egp": 963477.91, "reconciled_po_value_egp": 963477.91, "raw_grn_qty": 7392.2, "reconciled_grn_qty": 7392.2, "raw_invoice_value_egp": 975735.31, "reconciled_invoice_value_egp": 975735.31, "raw_branch_net_sales_egp": 10189278.32, "pnl_net_sales_egp": 10189278.32, "total_contribution_profit_egp": 1836358.29}, "extended_case_studies": {"case_study_3_d365_gl_and_consignment": {"status": "PASSED", "gl_posting_rows": 1080, "legal_entities": ["EG01", "KSA1"], "gl_debit_egp": 38766373.8, "gl_credit_egp": 38766373.8, "gl_trial_balance_drift_egp": 0.0, "consignment_skus_audited": 40, "consignment_exceptions_held": 13, "consignment_vendor_claim_egp": 969582.05, "consignment_authorized_payable_egp": 934049.0, "consignment_blocked_overclaim_egp": 35533.05, "workbook_bytes": 16856}, "case_study_4_aggregator_sync_and_produce": {"status": "PASSED", "sftp_cadence_minutes": 90, "aggregator_skus_evaluated": 32, "published_to_sftp_count": 22, "anomalies_blocked_total": 10, "negative_stock_blocked": 4, "stale_sla_held": 3, "safety_buffer_suppressed": 3, "oversell_penalty_exposure_prevented_egp": 1085.0, "produce_lines_audited": 24, "produce_critical_shrinkage_alerts": 5, "produce_bulk_input_kg": 7301.33, "produce_accounted_kg": 7301.33, "produce_mass_balance_drift_kg": 0.0, "produce_unexplained_shrinkage_egp": 7291.01, "workbook_bytes": 15798}, "case_study_5_promo_roi_and_dax_benchmark": {"status": "PASSED", "promo_skus_audited": 60, "magazine_cycles_count": 3, "total_promo_sales_egp": 4784281.52, "total_vendor_rebates_egp": 529844.45, "net_incremental_profit_lift_egp": 98388.45, "value_destroying_promos_count": 14, "value_destroying_erosion_egp": 75485.28, "benchmark_rows_tested": 30000, "benchmark_slow_ms": 8.7, "benchmark_fast_ms": 2.46, "benchmark_speedup_pct": 71.72, "benchmark_numerical_drift_egp": 0.0, "workbook_bytes": 12828}}};
 
     function parseCSV(text) {
       const lines = text.trim().split(/\r?\n/);
