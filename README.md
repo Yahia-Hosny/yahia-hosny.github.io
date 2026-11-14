@@ -41,5 +41,8 @@
 
 ## Connect & Discuss Your Pipeline
 
+- **WhatsApp Business (Fastest Response — Daily from 9:00 PM Cairo / 10:00 PM KSA):** https://wa.me/201055520554 (`+20 105 552 0554` / `01055520554`)
+- **Work Email:** yahiahosny58@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/yahia-hosny
+- **First-2-Clients Fast-Close Pilot Offer:** `75–120 USD` (`3,750–6,000 EGP`) for a 3–4 day verified diagnostic & automation pilot (`100%` mathematical tie-out guaranteed; no confidential data required upfront).
 - **Core Capabilities:** Microsoft Dynamics 365 F&O (`OData`, `BYOD`, `SQL`), Retail Finance & P&L Automation, Automated Excel & Power BI (`DAX`), Python ETL & API/SFTP Sync.
