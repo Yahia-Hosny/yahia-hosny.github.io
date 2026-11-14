@@ -1,0 +1,24 @@
+{
+  "status": "PASSED",
+  "unique_po_sku_keys": 122,
+  "split_grn_inv_clean_matches_verified": 24,
+  "total_exceptions_detected": 38,
+  "exception_breakdown": {
+    "UNRECEIPTED_INVOICE_NO_GRN": 12,
+    "QTY_OVER_BILLED_VS_GRN": 12,
+    "PRICE_OVERCHARGE_VS_PO": 12,
+    "ORPHAN_INVOICE_NO_PO": 2
+  },
+  "total_financial_exposure_egp": 110315.01,
+  "tie_out_checks": {
+    "raw_po_value_egp": 963477.91,
+    "reconciled_po_value_egp": 963477.91,
+    "raw_grn_qty": 7392.2,
+    "reconciled_grn_qty": 7392.2,
+    "raw_invoice_value_egp": 975735.31,
+    "reconciled_invoice_value_egp": 975735.31,
+    "raw_branch_net_sales_egp": 10189278.32,
+    "pnl_net_sales_egp": 10189278.32,
+    "total_contribution_profit_egp": 1836358.29
+  }
+}

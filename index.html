@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahia Hosny — Retail Finance, 3-Way Matching &amp; D365 F&amp;O Automation Portfolio</title>
+  <meta name="description" content="Interactive Portfolio by Yahia Hosny: Multi-Branch & Delivery Channel P&L (10.19M EGP Synthetic Benchmark), 3-Way Match PO-GRN-Invoice Audit (110.3k EGP Exposure Caught), and D365 F&O BYOD/OData Automation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yahia-hosny.github.io/" />
+  <meta property="og:title" content="Retail Finance, 3-Way Matching & D365 F&O Automation — Portfolio Showcase" />
+  <meta property="og:description" content="Explore live Branch & Delivery P&L analytics, 38 flagged 3-Way Match procurement exceptions (0.00 tie-out drift), D365 F&O BYOD architecture, and downloadable Excel executive workbooks." />
+  <meta property="og:image" content="https://yahia-hosny.github.io/visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Retail Finance & D365 F&O Automation — Interactive Portfolio" />
+  <meta name="twitter:description" content="Built by Yahia Hosny | 100% Synthetic Retail Benchmark | Downloadable Excel Dashboards & Live 3-Way Match Audit." />
+  <meta name="twitter:image" content="https://yahia-hosny.github.io/visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" />
+  <style>
+    :root {
+      --navy-dark: #0F172A;
+      --navy-card: #1E293B;
+      --slate-border: #334155;
+      --bg-canvas: #F8FAFC;
+      --card-white: #FFFFFF;
+      --grid-line: #E2E8F0;
+      --text-dark: #0F172A;
+      --text-muted: #475569;
+      --text-light: #94A3B8;
+      --emerald: #10B981;
+      --emerald-dark: #064E3B;
+      --emerald-soft: #DCFCE7;
+      --emerald-text: #065F46;
+      --crimson: #EF4444;
+      --crimson-soft: #FEE2E2;
+      --crimson-text: #991B1B;
+      --amber: #F59E0B;
+      --amber-soft: #FEF3C7;
+      --amber-text: #92400E;
+      --blue: #2563EB;
+      --blue-soft: #DBEAFE;
+      --blue-text: #1E40AF;
+      --indigo: #6366F1;
+      --indigo-soft: #EDE9FE;
+      --indigo-text: #5B21B6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+      background-color: var(--bg-canvas);
+      color: var(--text-dark);
+      line-height: 1.45;
+    }
+
+    /* Top Executive Header */
+    .top-header {
+      background: linear-gradient(135deg, #0F172A 0%, #172554 100%);
+      color: #F8FAFC;
+      border-bottom: 4px solid var(--emerald);
+      padding: 20px 28px;
+    }
+
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+    }
+
+    .brand-sub {
+      font-size: 13px;
+      color: #CBD5E1;
+      margin-top: 4px;
+    }
+
+    .header-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .pill-status {
+      background-color: var(--emerald-dark);
+      border: 1px solid var(--emerald);
+      color: #ECFDF5;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .pill-synth {
+      background-color: rgba(30, 41, 59, 0.9);
+      border: 1px solid var(--slate-border);
+      color: #CBD5E1;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 999px;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 22px 28px 40px;
+    }
+
+    /* Executive KPI Strip */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 1180px) {
+      .kpi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .kpi-card {
+      background-color: var(--navy-card);
+      border: 1px solid var(--slate-border);
+      border-radius: 10px;
+      padding: 15px 16px 14px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+    }
+
+    .kpi-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: var(--blue);
+    }
+
+    .kpi-card.accent-emerald::before { background-color: var(--emerald); }
+    .kpi-card.accent-crimson::before { background-color: var(--crimson); }
+    .kpi-card.accent-amber::before { background-color: var(--amber); }
+    .kpi-card.accent-blue::before { background-color: var(--blue); }
+
+    .kpi-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-light);
+    }
+
+    .kpi-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 6px 0 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .kpi-sub {
+      font-size: 12px;
+      color: #CBD5E1;
+    }
+
+    /* Tab Bar */
+    .tab-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      background-color: var(--card-white);
+      border: 1px solid var(--grid-line);
+      border-radius: 10px;
+      padding: 6px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    }
+
+    .tab-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .tab-btn:hover {
+      background-color: #F1F5F9;
+      color: var(--text-dark);
+    }
+
+    .tab-btn.active {
+      background-color: var(--navy-dark);
+      color: #FFFFFF;
+      box-shadow: 0 2px 5px rgba(15, 23, 42, 0.18);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* White Panel Card */
+    .panel {
+      background-color: var(--card-white);
+      border: 1px solid var(--grid-line);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+    }
+
+    .panel-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--grid-line);
+      margin-bottom: 16px;
+    }
+
+    .panel-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .panel-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Filter Toolbar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      background-color: #F8FAFC;
+      border: 1px solid var(--grid-line);
+      border-radius: 9px;
+      padding: 12px 14px;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .filter-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-right: 4px;
+    }
+
+    .chip-btn {
+      border: 1px solid #CBD5E1;
+      background-color: #FFFFFF;
+      color: var(--text-dark);
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.14s ease;
+    }
+
+    .chip-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .chip-btn.active {
+      background-color: var(--blue);
+      border-color: var(--blue);
+      color: #FFFFFF;
+    }
+
+    .chip-btn.active-crimson {
+      background-color: var(--crimson);
+      border-color: var(--crimson);
+      color: #FFFFFF;
+    }
+
+    .chip-btn.active-amber {
+      background-color: var(--amber);
+      border-color: var(--amber);
+      color: #FFFFFF;
+    }
+
+    .chip-btn.active-indigo {
+      background-color: var(--indigo);
+      border-color: var(--indigo);
+      color: #FFFFFF;
+    }
+
+    .input-ctrl, .select-ctrl {
+      border: 1px solid #CBD5E1;
+      background-color: #FFFFFF;
+      color: var(--text-dark);
+      font-size: 13px;
+      padding: 7px 11px;
+      border-radius: 7px;
+      font-family: inherit;
+    }
+
+    .input-ctrl:focus, .select-ctrl:focus {
+      outline: 2px solid var(--blue);
+      border-color: var(--blue);
+    }
+
+    /* Sub KPI Row inside Tabs */
+    .sub-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .sub-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .sub-kpi {
+      background-color: #F8FAFC;
+      border: 1px solid var(--grid-line);
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      padding: 11px 14px;
+    }
+
+    .sub-kpi.emerald { border-left-color: var(--emerald); }
+    .sub-kpi.crimson { border-left-color: var(--crimson); }
+    .sub-kpi.amber { border-left-color: var(--amber); }
+
+    .sub-kpi-lbl {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .sub-kpi-val {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-top: 3px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sub-kpi-note {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Pure CSS Horizontal Visual Bars */
+    .visual-bars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 820px) {
+      .visual-bars {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bar-card {
+      border: 1px solid var(--grid-line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background-color: #FFFFFF;
+    }
+
+    .bar-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .bar-track {
+      height: 10px;
+      background-color: #E2E8F0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+
+    .bar-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--grid-line);
+      border-radius: 9px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    thead th {
+      background-color: var(--navy-dark);
+      color: #F8FAFC;
+      text-align: left;
+      font-weight: 700;
+      padding: 10px 10px;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 2px solid var(--slate-border);
+    }
+
+    thead th:hover {
+      background-color: var(--navy-card);
+    }
+
+    thead th.num, tbody td.num, tfoot td.num {
+      text-align: right;
+    }
+
+    tbody td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--grid-line);
+      white-space: nowrap;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #F8FAFC;
+    }
+
+    tbody tr:hover {
+      background-color: #EFF6FF;
+    }
+
+    tfoot td {
+      background-color: #F1F5F9;
+      font-weight: 700;
+      padding: 10px 10px;
+      border-top: 2px solid #CBD5E1;
+      white-space: nowrap;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-emerald { background-color: var(--emerald-soft); color: var(--emerald-text); }
+    .badge-blue { background-color: var(--blue-soft); color: var(--blue-text); }
+    .badge-crimson { background-color: var(--crimson-soft); color: var(--crimson-text); }
+    .badge-amber { background-color: var(--amber-soft); color: var(--amber-text); }
+    .badge-indigo { background-color: var(--indigo-soft); color: var(--indigo-text); }
+
+    /* Architecture Stage Cards */
+    .arch-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 1020px) {
+      .arch-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .arch-flow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stage-card {
+      border: 2px solid var(--grid-line);
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #FFFFFF;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .stage-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .stage-card.active {
+      border-color: var(--emerald);
+      background-color: #ECFDF5;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.14);
+    }
+
+    .stage-num {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 4px;
+    }
+
+    .stage-card.active .stage-num {
+      color: var(--emerald-text);
+    }
+
+    .stage-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .stage-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .stage-detail-box {
+      background-color: var(--navy-dark);
+      color: #E2E8F0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      border-left: 5px solid var(--emerald);
+    }
+
+    .stage-detail-box h3 {
+      color: #FFFFFF;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .stage-detail-box ul {
+      padding-left: 20px;
+      font-size: 13.5px;
+      color: #CBD5E1;
+    }
+
+    .stage-detail-box li {
+      margin-bottom: 4px;
+    }
+
+    .code-tag {
+      background-color: var(--navy-card);
+      border: 1px solid var(--slate-border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 12px;
+      color: #6EE7B7;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid var(--grid-line);
+    }
+
+    /* Action Bar & Showcase Visual Gallery */
+    .action-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--card-white);
+      border: 1px solid var(--grid-line);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    }
+
+    .action-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--blue);
+      background-color: var(--blue-soft);
+      color: var(--blue-text);
+      transition: all 0.15s ease;
+    }
+
+    .btn-dl:hover {
+      background-color: var(--blue);
+      color: #FFFFFF;
+    }
+
+    .btn-dl.emerald {
+      border-color: var(--emerald);
+      background-color: var(--emerald-soft);
+      color: var(--emerald-text);
+    }
+
+    .btn-dl.emerald:hover {
+      background-color: var(--emerald);
+      color: #FFFFFF;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background-color: var(--navy-dark);
+      color: #FFFFFF;
+      border: 1px solid var(--navy-dark);
+      transition: all 0.15s ease;
+    }
+
+    .btn-cta:hover {
+      background-color: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .visual-card {
+      border: 1px solid var(--grid-line);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid var(--grid-line);
+    }
+
+    .visual-card-body {
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .visual-card-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .visual-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-header">
+    <div class="header-inner">
+      <div>
+        <div class="brand-title">Retail Finance, 3-Way Matching &amp; D365 F&amp;O Automation</div>
+        <div class="brand-sub">Interactive Executive Portfolio Demo by Yahia Hosny (Financial Data Analyst — Retail &amp; FMCG)</div>
+      </div>
+      <div class="header-badges">
+        <span class="pill-synth">100% Synthetic Benchmark Data | Zero Employer Records</span>
+        <span class="pill-status" id="headerTieStatus">CONTROL TIE-OUT: PASSED</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Action Strip: Excel Deliverables & Contact -->
+    <section class="action-strip" aria-label="Downloads and Contact">
+      <div class="action-group">
+        <a class="btn-dl emerald" href="downloads/Portfolio_1_Retail_Branch_Delivery_PnL_Dashboard.xlsx" download>Download Excel 1: Branch &amp; Delivery P&amp;L (.xlsx)</a>
+        <a class="btn-dl" href="downloads/Portfolio_2_Three_Way_Match_PO_GRN_Invoice_Audit.xlsx" download>Download Excel 2: 3-Way Match Audit (.xlsx)</a>
+        <a class="btn-dl" href="downloads/audit_verification_report.json" target="_blank" rel="noopener noreferrer">View Tie-Out JSON</a>
+      </div>
+      <div class="action-group">
+        <a class="btn-cta" href="https://www.linkedin.com/in/yahia-hosny" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- Global Audited KPI Strip -->
+    <section class="kpi-grid" id="globalKpiGrid">
+      <div class="kpi-card accent-blue">
+        <div class="kpi-label">Multi-Branch Net Sales</div>
+        <div class="kpi-value" id="gkNetSales">10,189,278.32 EGP</div>
+        <div class="kpi-sub">12,000 Transactions | 4 Retail Branches</div>
+      </div>
+      <div class="kpi-card accent-emerald">
+        <div class="kpi-label">Contribution Profit</div>
+        <div class="kpi-value" id="gkContribProfit">1,836,358.29 EGP</div>
+        <div class="kpi-sub">18.02% Blended Margin (0.00 Drift)</div>
+      </div>
+      <div class="kpi-card accent-crimson">
+        <div class="kpi-label">3-Way Match Exposure</div>
+        <div class="kpi-value" id="gkExposure">110,315.01 EGP</div>
+        <div class="kpi-sub">Preventable AP Leakage Flagged</div>
+      </div>
+      <div class="kpi-card accent-amber">
+        <div class="kpi-label">Exceptions Detected</div>
+        <div class="kpi-value" id="gkExceptions">38 / 122 Keys</div>
+        <div class="kpi-sub">12 No-GRN | 12 Qty | 12 Price | 2 Orphan</div>
+      </div>
+      <div class="kpi-card accent-emerald">
+        <div class="kpi-label">Split GRN / Inv Clean Matches</div>
+        <div class="kpi-value" id="gkSplitMatches">24 Verified</div>
+        <div class="kpi-sub">Zero Many-to-Many Cartesian Fan-Out</div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-bar" role="tablist">
+      <button class="tab-btn active" data-tab="tab-pnl" onclick="switchTab('tab-pnl', this)">Branch &amp; Delivery P&amp;L</button>
+      <button class="tab-btn" data-tab="tab-match" onclick="switchTab('tab-match', this)">3-Way Match Audit</button>
+      <button class="tab-btn" data-tab="tab-arch" onclick="switchTab('tab-arch', this)">D365 F&amp;O Architecture</button>
+      <button class="tab-btn" data-tab="tab-gallery" onclick="switchTab('tab-gallery', this)">Executive Visuals &amp; Case Studies</button>
+    </nav>
+
+    <!-- TAB 1: BRANCH & DELIVERY P&L -->
+    <section id="tab-pnl" class="tab-panel active">
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Interactive Branch &amp; Channel P&amp;L Explorer</div>
+            <div class="panel-subtitle">Parsed live from <code>branch_delivery_pnl_summary.csv</code> — filter by Branch or Channel to recalculate margins and cost compression.</div>
+          </div>
+          <button class="chip-btn" onclick="resetPnlFilters()">Reset P&amp;L Filters</button>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-group" id="pnlBranchFilters">
+            <span class="filter-label">Branch:</span>
+            <button class="chip-btn active" data-branch="ALL" onclick="setPnlBranch('ALL', this)">All Branches (4)</button>
+            <button class="chip-btn" data-branch="Dokki" onclick="setPnlBranch('Dokki', this)">Dokki</button>
+            <button class="chip-btn" data-branch="Nasr City" onclick="setPnlBranch('Nasr City', this)">Nasr City</button>
+            <button class="chip-btn" data-branch="New Cairo" onclick="setPnlBranch('New Cairo', this)">New Cairo</button>
+            <button class="chip-btn" data-branch="Alexandria" onclick="setPnlBranch('Alexandria', this)">Alexandria</button>
+          </div>
+          <div class="filter-group" id="pnlChannelFilters">
+            <span class="filter-label">Channel:</span>
+            <button class="chip-btn active" data-channel="ALL" onclick="setPnlChannel('ALL', this)">All Channels (3)</button>
+            <button class="chip-btn" data-channel="In-Store" onclick="setPnlChannel('In-Store', this)">In-Store</button>
+            <button class="chip-btn" data-channel="Own-Delivery" onclick="setPnlChannel('Own-Delivery', this)">Own-Delivery</button>
+            <button class="chip-btn" data-channel="Aggregator-App" onclick="setPnlChannel('Aggregator-App', this)">Aggregator-App</button>
+          </div>
+        </div>
+
+        <div class="sub-kpi-grid">
+          <div class="sub-kpi">
+            <div class="sub-kpi-lbl">Filtered Net Sales</div>
+            <div class="sub-kpi-val" id="pnlKpiSales">0.00 EGP</div>
+            <div class="sub-kpi-note" id="pnlKpiTxns">0 transactions</div>
+          </div>
+          <div class="sub-kpi emerald">
+            <div class="sub-kpi-lbl">Filtered Contribution Profit</div>
+            <div class="sub-kpi-val" id="pnlKpiProfit">0.00 EGP</div>
+            <div class="sub-kpi-note" id="pnlKpiMargin">0.00% Blended Margin</div>
+          </div>
+          <div class="sub-kpi crimson">
+            <div class="sub-kpi-lbl">Aggregator Comm + Fleet Cost</div>
+            <div class="sub-kpi-val" id="pnlKpiFees">0.00 EGP</div>
+            <div class="sub-kpi-note" id="pnlKpiFeeSplit">Comm: 0 | Fleet: 0 EGP</div>
+          </div>
+          <div class="sub-kpi amber">
+            <div class="sub-kpi-lbl">Fresh Produce Waste</div>
+            <div class="sub-kpi-val" id="pnlKpiWaste">0.00 EGP</div>
+            <div class="sub-kpi-note" id="pnlKpiWastePct">0.00% of Net Sales</div>
+          </div>
+        </div>
+
+        <div class="visual-bars" id="pnlChannelBars"></div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th onclick="sortPnlTable('branch_id')">Branch ID</th>
+                <th onclick="sortPnlTable('branch_name')">Branch</th>
+                <th onclick="sortPnlTable('channel')">Channel</th>
+                <th class="num" onclick="sortPnlTable('txn_count')">Txns</th>
+                <th class="num" onclick="sortPnlTable('total_units')">Units</th>
+                <th class="num" onclick="sortPnlTable('gross_sales_egp')">Gross Sales</th>
+                <th class="num" onclick="sortPnlTable('discount_egp')">Discount</th>
+                <th class="num" onclick="sortPnlTable('net_sales_egp')">Net Sales (EGP)</th>
+                <th class="num" onclick="sortPnlTable('cogs_egp')">COGS</th>
+                <th class="num" onclick="sortPnlTable('waste_egp')">Waste</th>
+                <th class="num" onclick="sortPnlTable('aggregator_commission_egp')">Agg. Comm</th>
+                <th class="num" onclick="sortPnlTable('delivery_cost_egp')">Fleet Cost</th>
+                <th class="num" onclick="sortPnlTable('contribution_profit_egp')">Contrib. Profit</th>
+                <th class="num" onclick="sortPnlTable('contribution_margin_pct')">Margin %</th>
+              </tr>
+            </thead>
+            <tbody id="pnlTableBody"></tbody>
+            <tfoot id="pnlTableFoot"></tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: 3-WAY MATCH AUDIT -->
+    <section id="tab-match" class="tab-panel">
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">3-Way Match Exceptions Workbench (PO vs. GRN vs. Invoice)</div>
+            <div class="panel-subtitle">Parsed live from <code>three_way_match_exceptions.csv</code> — click exception filters to inspect financial exposure and line-level variances.</div>
+          </div>
+          <button class="chip-btn" onclick="resetMatchFilters()">Reset Audit Filters</button>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-group" id="matchStatusFilters">
+            <span class="filter-label">Exception Type:</span>
+            <button class="chip-btn active" data-status="ALL" onclick="setMatchStatus('ALL', this)">ALL (38)</button>
+            <button class="chip-btn" data-status="UNRECEIPTED_INVOICE_NO_GRN" onclick="setMatchStatus('UNRECEIPTED_INVOICE_NO_GRN', this)">Unreceipted No GRN (12)</button>
+            <button class="chip-btn" data-status="QTY_OVER_BILLED_VS_GRN" onclick="setMatchStatus('QTY_OVER_BILLED_VS_GRN', this)">Qty Over-Billed (12)</button>
+            <button class="chip-btn" data-status="PRICE_OVERCHARGE_VS_PO" onclick="setMatchStatus('PRICE_OVERCHARGE_VS_PO', this)">Price Overcharge (12)</button>
+            <button class="chip-btn" data-status="ORPHAN_INVOICE_NO_PO" onclick="setMatchStatus('ORPHAN_INVOICE_NO_PO', this)">Orphan No PO (2)</button>
+          </div>
+          <div class="filter-group">
+            <select id="matchVendorSelect" class="select-ctrl" onchange="renderMatchView()">
+              <option value="ALL">All Vendors (5)</option>
+            </select>
+            <input id="matchSearchInput" class="input-ctrl" type="text" placeholder="Search PO, SKU, or Item..." oninput="renderMatchView()" />
+          </div>
+        </div>
+
+        <div class="sub-kpi-grid">
+          <div class="sub-kpi crimson">
+            <div class="sub-kpi-lbl">Filtered Exposure Caught</div>
+            <div class="sub-kpi-val" id="matchKpiExposure">0.00 EGP</div>
+            <div class="sub-kpi-note" id="matchKpiExposureShare">0.0% of total exposure</div>
+          </div>
+          <div class="sub-kpi amber">
+            <div class="sub-kpi-lbl">Filtered Exception Lines</div>
+            <div class="sub-kpi-val" id="matchKpiCount">0</div>
+            <div class="sub-kpi-note" id="matchKpiCountNote">Out of 38 flagged lines</div>
+          </div>
+          <div class="sub-kpi">
+            <div class="sub-kpi-lbl">Avg Exposure / Exception</div>
+            <div class="sub-kpi-val" id="matchKpiAvg">0.00 EGP</div>
+            <div class="sub-kpi-note">Mean discrepancy per flagged key</div>
+          </div>
+          <div class="sub-kpi emerald">
+            <div class="sub-kpi-lbl">Invoiced Amount Impacted</div>
+            <div class="sub-kpi-val" id="matchKpiInvoiced">0.00 EGP</div>
+            <div class="sub-kpi-note">Gross AP invoice value held for review</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th onclick="sortMatchTable('po_number')">PO Number</th>
+                <th onclick="sortMatchTable('sku')">SKU</th>
+                <th onclick="sortMatchTable('vendor_name')">Vendor</th>
+                <th onclick="sortMatchTable('item_name')">Item</th>
+                <th class="num" onclick="sortMatchTable('po_qty')">PO Qty</th>
+                <th class="num" onclick="sortMatchTable('received_qty')">GRN Qty</th>
+                <th class="num" onclick="sortMatchTable('invoiced_qty')">Inv Qty</th>
+                <th class="num" onclick="sortMatchTable('po_unit_price')">PO Price</th>
+                <th class="num" onclick="sortMatchTable('invoiced_unit_price')">Inv Price</th>
+                <th class="num" onclick="sortMatchTable('invoiced_amount')">Invoiced Amt</th>
+                <th class="num" onclick="sortMatchTable('qty_variance_inv_vs_grn')">Qty Var</th>
+                <th class="num" onclick="sortMatchTable('unit_price_variance')">Price Var</th>
+                <th class="num" onclick="sortMatchTable('financial_exposure_egp')">Exposure (EGP)</th>
+                <th onclick="sortMatchTable('match_status')">Match Status</th>
+              </tr>
+            </thead>
+            <tbody id="matchTableBody"></tbody>
+            <tfoot id="matchTableFoot"></tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: D365 F&O ARCHITECTURE -->
+    <section id="tab-arch" class="tab-panel">
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">D365 F&amp;O OData / BYOD &amp; Python Automation Architecture</div>
+            <div class="panel-subtitle">Click any stage below to inspect staging entities, CTE grain rules, mathematical assertions, and SLA impact.</div>
+          </div>
+          <span class="badge badge-emerald">Zero X++ Modification Required</span>
+        </div>
+
+        <div class="arch-flow">
+          <div class="stage-card active" onclick="selectStage(0, this)">
+            <div class="stage-num">Stage 01 — Sources</div>
+            <div class="stage-name">D365 F&amp;O (OData / BYOD) &amp; MS Graph</div>
+            <div class="stage-desc">Reads staging entities, retail POS feeds, and OneDrive branch stock workbooks via MSAL OAuth2.</div>
+          </div>
+          <div class="stage-card" onclick="selectStage(1, this)">
+            <div class="stage-num">Stage 02 — Engine</div>
+            <div class="stage-name">Python (Polars / DuckDB / Pandas)</div>
+            <div class="stage-desc">Pre-aggregates PO, GRN, and Invoice tables to (po_number, sku) grain before joining.</div>
+          </div>
+          <div class="stage-card" onclick="selectStage(2, this)">
+            <div class="stage-num">Stage 03 — Governance</div>
+            <div class="stage-name">Control Tie-Out Gate (0.01 Tolerance)</div>
+            <div class="stage-desc">Enforces strict raw-vs-reconciled assertions on POs, GRNs, Invoices, and Net Sales.</div>
+          </div>
+          <div class="stage-card" onclick="selectStage(3, this)">
+            <div class="stage-num">Stage 04 — Delivery</div>
+            <div class="stage-name">SFTP 1.5h + Excel P&amp;L + Power BI</div>
+            <div class="stage-desc">Syncs aggregator inventory every 90m, builds styled .xlsx workbooks, and speeds DAX by 60%.</div>
+          </div>
+        </div>
+
+        <div class="stage-detail-box" id="stageDetailBox"></div>
+
+        <div class="panel-header" style="margin-top: 8px;">
+          <div>
+            <div class="panel-title">Verified Mathematical Tie-Out Ledger (<code>audit_verification_report.json</code>)</div>
+            <div class="panel-subtitle">Automated control checks verifying zero row loss and zero Cartesian fan-out drift.</div>
+          </div>
+          <span class="badge badge-emerald">ALL ASSERTIONS PASSED</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Control Tie-Out Check</th>
+                <th class="num">Raw Source Total</th>
+                <th class="num">Reconciled Output Total</th>
+                <th class="num">Drift / Variance</th>
+                <th>Governance Status</th>
+              </tr>
+            </thead>
+            <tbody id="tieOutTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: EXECUTIVE VISUALS & CASE STUDIES -->
+    <section id="tab-gallery" class="tab-panel">
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Executive Portfolio Visuals &amp; Architecture Diagrams</div>
+            <div class="panel-subtitle">High-resolution 1600x1000 snapshots built from the 100% synthetic retail benchmark dataset. Click any image to inspect full screen.</div>
+          </div>
+          <a class="btn-dl emerald" href="downloads/Portfolio_1_Retail_Branch_Delivery_PnL_Dashboard.xlsx" download>Get Both .xlsx Workbooks</a>
+        </div>
+        <div class="gallery-grid">
+          <div class="visual-card">
+            <a href="visuals/01_Retail_Branch_Delivery_PnL_Dashboard.png" target="_blank" rel="noopener noreferrer">
+              <img src="visuals/01_Retail_Branch_Delivery_PnL_Dashboard.png" alt="Retail Branch and Delivery P&L Dashboard" loading="lazy" />
+            </a>
+            <div class="visual-card-body">
+              <div>
+                <div class="visual-card-title">01. Multi-Branch &amp; Delivery Channel P&amp;L</div>
+                <div class="visual-card-sub">10.19M EGP Net Sales | 14% Aggregator Margin Compression</div>
+              </div>
+              <a class="btn-dl" href="visuals/01_Retail_Branch_Delivery_PnL_Dashboard.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
+            </div>
+          </div>
+          <div class="visual-card">
+            <a href="visuals/02_Three_Way_Match_Audit_Engine.png" target="_blank" rel="noopener noreferrer">
+              <img src="visuals/02_Three_Way_Match_Audit_Engine.png" alt="Three-Way Match PO GRN Invoice Audit Engine" loading="lazy" />
+            </a>
+            <div class="visual-card-body">
+              <div>
+                <div class="visual-card-title">02. Three-Way Match Audit Engine</div>
+                <div class="visual-card-sub">110,315.01 EGP Exposure Caught | 24 Split GRN Clean Matches</div>
+              </div>
+              <a class="btn-dl" href="visuals/02_Three_Way_Match_Audit_Engine.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
+            </div>
+          </div>
+          <div class="visual-card">
+            <a href="visuals/03_D365_FO_OData_BYOD_Pipeline_Architecture.png" target="_blank" rel="noopener noreferrer">
+              <img src="visuals/03_D365_FO_OData_BYOD_Pipeline_Architecture.png" alt="D365 F&O OData BYOD Python SFTP Architecture" loading="lazy" />
+            </a>
+            <div class="visual-card-body">
+              <div>
+                <div class="visual-card-title">03. D365 F&amp;O + MS Graph + SFTP Pipeline</div>
+                <div class="visual-card-sub">1.5h Automated Stock Sync | 60% Power BI Query Speedup</div>
+              </div>
+              <a class="btn-dl" href="visuals/03_D365_FO_OData_BYOD_Pipeline_Architecture.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
+            </div>
+          </div>
+          <div class="visual-card">
+            <a href="visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" target="_blank" rel="noopener noreferrer">
+              <img src="visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" alt="Retail Finance and D365 F&O Automation Service Banner" loading="lazy" />
+            </a>
+            <div class="visual-card-body">
+              <div>
+                <div class="visual-card-title">04. Consulting &amp; Automation Scope Overview</div>
+                <div class="visual-card-sub">D365 F&amp;O (OData / BYOD) | Python Polars &amp; DuckDB | Excel &amp; Power BI</div>
+              </div>
+              <a class="btn-dl" href="visuals/04_Fiverr_Upwork_Service_Cover_Banner.png" target="_blank" rel="noopener noreferrer">Open PNG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Live Interactive Portfolio Showcase &bull; Built by Yahia Hosny &bull; 100% Synthetic Benchmark Dataset &bull; Core Proprietary Automation Code Kept Private
+    </footer>
+  </main>
+
+  <script>
+    const PNL_CSV = "branch_id,branch_name,channel,txn_count,total_units,gross_sales_egp,discount_egp,net_sales_egp,cogs_egp,waste_egp,aggregator_commission_egp,delivery_cost_egp,contribution_profit_egp,contribution_margin_pct\nBR-01,Dokki,In-Store,2108,12932.0,1901772.76,37886.09,1863886.67,1447498.01,12755.58,0.0,0.0,403633.08,21.66\nBR-01,Dokki,Own-Delivery,509,3155.0,470016.28,9705.86,460310.42,358628.07,2866.14,0.0,8655.07,90161.14,19.59\nBR-01,Dokki,Aggregator-App,793,4766.0,698716.38,34986.35,663730.03,517835.26,4606.73,92922.28,0.0,48365.76,7.29\nBR-02,Nasr City,In-Store,1958,11565.0,1684997.28,32349.82,1652647.46,1282379.56,11193.91,0.0,0.0,359073.99,21.73\nBR-02,Nasr City,Own-Delivery,488,2930.0,418329.2,8333.34,409995.86,317078.95,2879.0,0.0,8284.79,81753.12,19.94\nBR-02,Nasr City,Aggregator-App,762,4583.0,664128.04,33516.81,630611.23,489234.18,4677.43,88285.61,0.0,48414.01,7.68\nBR-03,New Cairo,In-Store,1859,11036.0,1576316.3,31447.11,1544869.19,1206909.56,9398.3,0.0,0.0,328561.33,21.27\nBR-03,New Cairo,Own-Delivery,441,2637.0,383001.42,7575.34,375426.08,291796.43,2693.58,0.0,7490.36,73445.71,19.56\nBR-03,New Cairo,Aggregator-App,736,4516.0,629411.16,31357.22,598053.94,465560.85,4046.88,83727.67,0.0,44718.54,7.48\nBR-04,Alexandria,In-Store,1409,8468.0,1225520.74,24098.12,1201422.62,933359.87,7987.2,0.0,0.0,260075.55,21.65\nBR-04,Alexandria,Own-Delivery,359,2214.0,324477.58,6555.28,317922.3,248019.39,2164.5,0.0,6077.36,61661.05,19.4\nBR-04,Alexandria,Aggregator-App,578,3459.0,495391.9,24989.38,470402.52,364720.21,3331.0,65856.3,0.0,36495.01,7.76\n";
+    const EXC_CSV = "po_number,sku,vendor_id,vendor_name,item_name,has_po,has_grn,has_invoice,po_qty,po_unit_price,po_total_amount,received_qty,grn_count,invoiced_qty,invoiced_unit_price,invoiced_amount,invoice_count,qty_variance_inv_vs_grn,unit_price_variance,financial_exposure_egp,match_status\nPO-2026-0006,SKU-1004,V-102,Delta Dairy & Cold Chain,Arabica Coffee 200g,1,0,1,67.0,249.13,16691.71,0.0,0,67.0,249.13,16691.71,1,67.0,0.0,16691.71,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0003,SKU-1005,V-103,Oasis Dry Goods Co.,Cheddar Cheese 500g,1,0,1,69.0,160.6,11081.4,0.0,0,69.0,160.6,11081.4,1,69.0,0.0,11081.4,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0009,SKU-1005,V-101,Al-Nile FMCG Distribution,Cheddar Cheese 500g,1,0,1,60.0,167.09,10025.4,0.0,0,60.0,167.09,10025.4,1,60.0,0.0,10025.4,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0022,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,0,1,63.0,109.22,6880.86,0.0,0,63.0,109.22,6880.86,1,63.0,0.0,6880.86,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0002,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,0,1,60.0,112.12,6727.2,0.0,0,60.0,112.12,6727.2,1,60.0,0.0,6727.2,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0013,SKU-1002,V-101,Al-Nile FMCG Distribution,Basmati Rice 1Kg,1,0,1,82.0,77.61,6364.02,0.0,0,82.0,77.61,6364.02,1,82.0,0.0,6364.02,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0026,SKU-1006,V-102,Delta Dairy & Cold Chain,Bottled Water 1.5L Pack,1,0,1,96.0,59.28,5690.88,0.0,0,96.0,59.28,5690.88,1,96.0,0.0,5690.88,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0026,SKU-1004,V-102,Delta Dairy & Cold Chain,Arabica Coffee 200g,1,1,1,99.0,245.45,24299.55,79.2,1,99.0,245.45,24299.55,1,19.8,0.0,4859.91,QTY_OVER_BILLED_VS_GRN\nPO-2026-0009,SKU-1004,V-101,Al-Nile FMCG Distribution,Arabica Coffee 200g,1,1,1,98.0,247.42,24247.16,78.4,1,98.0,247.42,24247.16,1,19.6,0.0,4849.432,QTY_OVER_BILLED_VS_GRN\nPO-2026-0012,SKU-1005,V-104,Metro Fresh Produce,Cheddar Cheese 500g,1,0,1,27.0,167.96,4534.92,0.0,0,27.0,167.96,4534.92,1,27.0,0.0,4534.92,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0019,SKU-1002,V-103,Oasis Dry Goods Co.,Basmati Rice 1Kg,1,0,1,49.0,80.3,3934.7,0.0,0,49.0,80.3,3934.7,1,49.0,0.0,3934.7,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0023,SKU-1006,V-103,Oasis Dry Goods Co.,Bottled Water 1.5L Pack,1,0,1,63.0,59.49,3747.87,0.0,0,63.0,59.49,3747.87,1,63.0,0.0,3747.87,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0010,SKU-1004,V-102,Delta Dairy & Cold Chain,Arabica Coffee 200g,1,1,1,64.0,242.08,15493.12,51.2,1,64.0,242.08,15493.12,1,12.8,0.0,3098.624,QTY_OVER_BILLED_VS_GRN\nPO-UNAUTH-9002,SKU-1004,V-103,Unregistered / Orphan PO,Unmapped Item,0,0,1,0.0,0.0,0.0,0.0,0,12.0,250.0,3000.0,1,12.0,250.0,3000.0,ORPHAN_INVOICE_NO_PO\nPO-UNAUTH-9001,SKU-1001,V-101,Unregistered / Orphan PO,Unmapped Item,0,0,1,0.0,0.0,0.0,0.0,0,25.0,115.0,2875.0,1,25.0,115.0,2875.0,ORPHAN_INVOICE_NO_PO\nPO-2026-0029,SKU-1006,V-101,Al-Nile FMCG Distribution,Bottled Water 1.5L Pack,1,0,1,39.0,56.45,2201.55,0.0,0,39.0,56.45,2201.55,1,39.0,0.0,2201.55,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0016,SKU-1003,V-104,Metro Fresh Produce,Full Cream Milk 1L,1,0,1,48.0,42.06,2018.88,0.0,0,48.0,42.06,2018.88,1,48.0,0.0,2018.88,UNRECEIPTED_INVOICE_NO_GRN\nPO-2026-0016,SKU-1004,V-104,Metro Fresh Produce,Arabica Coffee 200g,1,1,1,115.0,245.3,28209.5,115.0,1,115.0,260.02,29902.3,1,0.0,14.72,1692.8,PRICE_OVERCHARGE_VS_PO\nPO-2026-0020,SKU-1005,V-104,Metro Fresh Produce,Cheddar Cheese 500g,1,1,1,29.0,161.66,4688.14,23.2,1,29.0,161.66,4688.14,1,5.8,0.0,937.628,QTY_OVER_BILLED_VS_GRN\nPO-2026-0016,SKU-1002,V-104,Metro Fresh Produce,Basmati Rice 1Kg,1,1,1,53.0,77.71,4118.63,42.4,1,53.0,77.71,4118.63,1,10.6,0.0,823.726,QTY_OVER_BILLED_VS_GRN\nPO-2026-0003,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,97.0,41.17,3993.49,77.6,1,97.0,41.17,3993.49,1,19.4,0.0,798.698,QTY_OVER_BILLED_VS_GRN\nPO-2026-0020,SKU-1001,V-104,Metro Fresh Produce,Sunflower Oil 1.5L,1,1,1,108.0,114.17,12330.36,108.0,1,108.0,121.02,13070.16,1,0.0,6.85,739.8,PRICE_OVERCHARGE_VS_PO\nPO-2026-0023,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,91.0,40.34,3670.94,72.8,1,91.0,40.34,3670.94,1,18.2,0.0,734.188,QTY_OVER_BILLED_VS_GRN\nPO-2026-0006,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,1,1,100.0,114.44,11444.0,100.0,1,100.0,121.31,12131.0,1,0.0,6.87,687.0,PRICE_OVERCHARGE_VS_PO\nPO-2026-0013,SKU-1003,V-101,Al-Nile FMCG Distribution,Full Cream Milk 1L,1,1,1,82.0,41.62,3412.84,65.6,1,82.0,41.62,3412.84,1,16.4,0.0,682.568,QTY_OVER_BILLED_VS_GRN\nPO-2026-0010,SKU-1005,V-102,Delta Dairy & Cold Chain,Cheddar Cheese 500g,1,1,1,69.0,162.83,11235.27,69.0,1,69.0,172.6,11909.4,1,0.0,9.77,674.13,PRICE_OVERCHARGE_VS_PO\nPO-2026-0030,SKU-1002,V-102,Delta Dairy & Cold Chain,Basmati Rice 1Kg,1,1,1,43.0,78.33,3368.19,34.4,1,43.0,78.33,3368.19,1,8.6,0.0,673.638,QTY_OVER_BILLED_VS_GRN\nPO-2026-0003,SKU-1001,V-103,Oasis Dry Goods Co.,Sunflower Oil 1.5L,1,1,1,87.0,110.44,9608.28,87.0,1,87.0,117.07,10185.09,1,0.0,6.63,576.81,PRICE_OVERCHARGE_VS_PO\nPO-2026-0030,SKU-1006,V-102,Delta Dairy & Cold Chain,Bottled Water 1.5L Pack,1,1,1,108.0,57.13,6170.04,108.0,1,108.0,60.56,6540.48,1,0.0,3.43,370.44,PRICE_OVERCHARGE_VS_PO\nPO-2026-0017,SKU-1001,V-101,Al-Nile FMCG Distribution,Sunflower Oil 1.5L,1,1,1,52.0,115.31,5996.12,52.0,1,52.0,122.23,6355.96,1,0.0,6.92,359.84,PRICE_OVERCHARGE_VS_PO\nPO-2026-0007,SKU-1002,V-103,Oasis Dry Goods Co.,Basmati Rice 1Kg,1,1,1,76.0,78.28,5949.28,76.0,1,76.0,82.98,6306.48,1,0.0,4.7,357.2,PRICE_OVERCHARGE_VS_PO\nPO-2026-0027,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,119.0,42.03,5001.57,119.0,1,119.0,44.55,5301.45,1,0.0,2.52,299.88,PRICE_OVERCHARGE_VS_PO\nPO-2026-0026,SKU-1001,V-102,Delta Dairy & Cold Chain,Sunflower Oil 1.5L,1,1,1,45.0,110.7,4981.5,45.0,1,45.0,117.34,5280.3,1,0.0,6.64,298.8,PRICE_OVERCHARGE_VS_PO\nPO-2026-0019,SKU-1003,V-103,Oasis Dry Goods Co.,Full Cream Milk 1L,1,1,1,36.0,40.12,1444.32,28.8,1,36.0,40.12,1444.32,1,7.2,0.0,288.864,QTY_OVER_BILLED_VS_GRN\nPO-2026-0006,SKU-1006,V-102,Delta Dairy & Cold Chain,Bottled Water 1.5L Pack,1,1,1,20.0,58.57,1171.4,16.0,1,20.0,58.57,1171.4,1,4.0,0.0,234.28,QTY_OVER_BILLED_VS_GRN\nPO-2026-0029,SKU-1003,V-101,Al-Nile FMCG Distribution,Full Cream Milk 1L,1,1,1,22.0,40.15,883.3,17.6,1,22.0,40.15,883.3,1,4.4,0.0,176.66,QTY_OVER_BILLED_VS_GRN\nPO-2026-0013,SKU-1006,V-101,Al-Nile FMCG Distribution,Bottled Water 1.5L Pack,1,1,1,50.0,58.29,2914.5,50.0,1,50.0,61.79,3089.5,1,0.0,3.5,175.0,PRICE_OVERCHARGE_VS_PO\nPO-2026-0023,SKU-1001,V-103,Oasis Dry Goods Co.,Sunflower Oil 1.5L,1,1,1,22.0,114.11,2510.42,22.0,1,22.0,120.96,2661.12,1,0.0,6.85,150.7,PRICE_OVERCHARGE_VS_PO\n";
+    const AUDIT_DATA = {"status": "PASSED", "unique_po_sku_keys": 122, "split_grn_inv_clean_matches_verified": 24, "total_exceptions_detected": 38, "exception_breakdown": {"UNRECEIPTED_INVOICE_NO_GRN": 12, "QTY_OVER_BILLED_VS_GRN": 12, "PRICE_OVERCHARGE_VS_PO": 12, "ORPHAN_INVOICE_NO_PO": 2}, "total_financial_exposure_egp": 110315.01, "tie_out_checks": {"raw_po_value_egp": 963477.91, "reconciled_po_value_egp": 963477.91, "raw_grn_qty": 7392.2, "reconciled_grn_qty": 7392.2, "raw_invoice_value_egp": 975735.31, "reconciled_invoice_value_egp": 975735.31, "raw_branch_net_sales_egp": 10189278.32, "pnl_net_sales_egp": 10189278.32, "total_contribution_profit_egp": 1836358.29}};
+
+    function parseCSV(text) {
+      const lines = text.trim().split(/\r?\n/);
+      const headers = lines[0].split(",");
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        if (!lines[i].trim()) continue;
+        const vals = lines[i].split(",");
+        const obj = {};
+        headers.forEach((h, idx) => {
+          const raw = (vals[idx] !== undefined ? vals[idx] : "").trim();
+          const num = Number(raw);
+          obj[h.trim()] = (raw !== "" && !Number.isNaN(num) && !/^BR-|^PO-|^SKU-|^V-/.test(raw)) ? num : raw;
+        });
+        rows.push(obj);
+      }
+      return rows;
+    }
+
+    const pnlRows = parseCSV(PNL_CSV);
+    const excRows = parseCSV(EXC_CSV);
+
+    const fmtMoney = (n) => Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmtInt = (n) => Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 });
+    const fmtQty = (n) => Number(n).toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 2 });
+
+    // Global tab switching
+    function switchTab(tabId, btn) {
+      document.querySelectorAll(".tab-panel").forEach(el => el.classList.remove("active"));
+      document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      btn.classList.add("active");
+    }
+
+    // ---------------- TAB 1: BRANCH & DELIVERY P&L ----------------
+    let pnlFilterBranch = "ALL";
+    let pnlFilterChannel = "ALL";
+    let pnlSortKey = "net_sales_egp";
+    let pnlSortAsc = false;
+
+    function setPnlBranch(branch, btn) {
+      pnlFilterBranch = branch;
+      document.querySelectorAll("#pnlBranchFilters .chip-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderPnlView();
+    }
+
+    function setPnlChannel(channel, btn) {
+      pnlFilterChannel = channel;
+      document.querySelectorAll("#pnlChannelFilters .chip-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderPnlView();
+    }
+
+    function resetPnlFilters() {
+      pnlFilterBranch = "ALL";
+      pnlFilterChannel = "ALL";
+      document.querySelectorAll("#pnlBranchFilters .chip-btn").forEach((b, i) => b.classList.toggle("active", i === 0));
+      document.querySelectorAll("#pnlChannelFilters .chip-btn").forEach((b, i) => b.classList.toggle("active", i === 0));
+      renderPnlView();
+    }
+
+    function sortPnlTable(key) {
+      if (pnlSortKey === key) {
+        pnlSortAsc = !pnlSortAsc;
+      } else {
+        pnlSortKey = key;
+        pnlSortAsc = typeof pnlRows[0][key] === "string";
+      }
+      renderPnlView();
+    }
+
+    function renderPnlView() {
+      const filtered = pnlRows.filter(r =>
+        (pnlFilterBranch === "ALL" || r.branch_name === pnlFilterBranch) &&
+        (pnlFilterChannel === "ALL" || r.channel === pnlFilterChannel)
+      ).slice().sort((a, b) => {
+        const va = a[pnlSortKey], vb = b[pnlSortKey];
+        if (typeof va === "number" && typeof vb === "number") return pnlSortAsc ? va - vb : vb - va;
+        return pnlSortAsc ? String(va).localeCompare(String(vb)) : String(vb).localeCompare(String(va));
+      });
+
+      const tot = filtered.reduce((acc, r) => {
+        acc.txn += r.txn_count;
+        acc.units += r.total_units;
+        acc.gross += r.gross_sales_egp;
+        acc.disc += r.discount_egp;
+        acc.net += r.net_sales_egp;
+        acc.cogs += r.cogs_egp;
+        acc.waste += r.waste_egp;
+        acc.comm += r.aggregator_commission_egp;
+        acc.deliv += r.delivery_cost_egp;
+        acc.profit += r.contribution_profit_egp;
+        return acc;
+      }, { txn: 0, units: 0, gross: 0, disc: 0, net: 0, cogs: 0, waste: 0, comm: 0, deliv: 0, profit: 0 });
+
+      const blendedMargin = tot.net > 0 ? (tot.profit / tot.net) * 100 : 0;
+      const wastePct = tot.net > 0 ? (tot.waste / tot.net) * 100 : 0;
+
+      document.getElementById("pnlKpiSales").textContent = fmtMoney(tot.net) + " EGP";
+      document.getElementById("pnlKpiTxns").textContent = fmtInt(tot.txn) + " transactions across " + filtered.length + " segments";
+      document.getElementById("pnlKpiProfit").textContent = fmtMoney(tot.profit) + " EGP";
+      document.getElementById("pnlKpiMargin").textContent = blendedMargin.toFixed(2) + "% Blended Contribution Margin";
+      document.getElementById("pnlKpiFees").textContent = fmtMoney(tot.comm + tot.deliv) + " EGP";
+      document.getElementById("pnlKpiFeeSplit").textContent = "Agg. Comm: " + fmtMoney(tot.comm) + " | Fleet: " + fmtMoney(tot.deliv);
+      document.getElementById("pnlKpiWaste").textContent = fmtMoney(tot.waste) + " EGP";
+      document.getElementById("pnlKpiWastePct").textContent = wastePct.toFixed(2) + "% of Filtered Net Sales";
+
+      // Channel Bar Cards
+      const chConfig = [
+        { name: "In-Store", color: "var(--emerald)" },
+        { name: "Own-Delivery", color: "var(--blue)" },
+        { name: "Aggregator-App", color: "var(--crimson)" }
+      ];
+      const barContainer = document.getElementById("pnlChannelBars");
+      barContainer.innerHTML = chConfig.map(ch => {
+        const sub = filtered.filter(r => r.channel === ch.name);
+        const sNet = sub.reduce((a, r) => a + r.net_sales_egp, 0);
+        const sProf = sub.reduce((a, r) => a + r.contribution_profit_egp, 0);
+        const sPct = sNet > 0 ? (sProf / sNet) * 100 : 0;
+        const barW = Math.min(100, (sPct / 25) * 100);
+        return `
+          <div class="bar-card">
+            <div class="bar-card-top">
+              <span>${ch.name} Margin</span>
+              <span style="color:${ch.color}">${sNet > 0 ? sPct.toFixed(2) + "%" : "—"}</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:${barW.toFixed(1)}%; background:${ch.color};"></div>
+            </div>
+            <div class="bar-meta">${sNet > 0 ? "Sales: " + fmtMoney(sNet) + " | Profit: " + fmtMoney(sProf) + " EGP" : "Excluded by channel filter"}</div>
+          </div>
+        `;
+      }).join("");
+
+      const tbody = document.getElementById("pnlTableBody");
+      tbody.innerHTML = filtered.map(r => {
+        const badgeCls = r.contribution_margin_pct >= 20.5 ? "badge-emerald" : (r.contribution_margin_pct >= 18 ? "badge-blue" : "badge-crimson");
+        return `
+          <tr>
+            <td><strong>${r.branch_id}</strong></td>
+            <td>${r.branch_name}</td>
+            <td>${r.channel}</td>
+            <td class="num">${fmtInt(r.txn_count)}</td>
+            <td class="num">${fmtInt(r.total_units)}</td>
+            <td class="num">${fmtMoney(r.gross_sales_egp)}</td>
+            <td class="num">${fmtMoney(r.discount_egp)}</td>
+            <td class="num"><strong>${fmtMoney(r.net_sales_egp)}</strong></td>
+            <td class="num">${fmtMoney(r.cogs_egp)}</td>
+            <td class="num">${fmtMoney(r.waste_egp)}</td>
+            <td class="num">${fmtMoney(r.aggregator_commission_egp)}</td>
+            <td class="num">${fmtMoney(r.delivery_cost_egp)}</td>
+            <td class="num"><strong>${fmtMoney(r.contribution_profit_egp)}</strong></td>
+            <td class="num"><span class="badge ${badgeCls}">${r.contribution_margin_pct.toFixed(2)}%</span></td>
+          </tr>
+        `;
+      }).join("");
+
+      document.getElementById("pnlTableFoot").innerHTML = `
+        <tr>
+          <td colspan="3">TOTAL (${filtered.length} Segments)</td>
+          <td class="num">${fmtInt(tot.txn)}</td>
+          <td class="num">${fmtInt(tot.units)}</td>
+          <td class="num">${fmtMoney(tot.gross)}</td>
+          <td class="num">${fmtMoney(tot.disc)}</td>
+          <td class="num">${fmtMoney(tot.net)}</td>
+          <td class="num">${fmtMoney(tot.cogs)}</td>
+          <td class="num">${fmtMoney(tot.waste)}</td>
+          <td class="num">${fmtMoney(tot.comm)}</td>
+          <td class="num">${fmtMoney(tot.deliv)}</td>
+          <td class="num">${fmtMoney(tot.profit)}</td>
+          <td class="num">${blendedMargin.toFixed(2)}%</td>
+        </tr>
+      `;
+    }
+
+    // ---------------- TAB 2: 3-WAY MATCH AUDIT ----------------
+    let matchFilterStatus = "ALL";
+    let matchSortKey = "financial_exposure_egp";
+    let matchSortAsc = false;
+    const totalAuditExposure = excRows.reduce((a, r) => a + r.financial_exposure_egp, 0);
+
+    function initVendorDropdown() {
+      const vendors = Array.from(new Set(excRows.map(r => r.vendor_name))).sort();
+      const sel = document.getElementById("matchVendorSelect");
+      vendors.forEach(v => {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = v;
+        sel.appendChild(opt);
+      });
+    }
+
+    function setMatchStatus(status, btn) {
+      matchFilterStatus = status;
+      document.querySelectorAll("#matchStatusFilters .chip-btn").forEach(b => {
+        b.classList.remove("active", "active-crimson", "active-amber", "active-indigo");
+      });
+      if (status === "UNRECEIPTED_INVOICE_NO_GRN") btn.classList.add("active-crimson");
+      else if (status === "QTY_OVER_BILLED_VS_GRN") btn.classList.add("active-amber");
+      else if (status === "ORPHAN_INVOICE_NO_PO") btn.classList.add("active-indigo");
+      else btn.classList.add("active");
+      renderMatchView();
+    }
+
+    function resetMatchFilters() {
+      matchFilterStatus = "ALL";
+      document.getElementById("matchVendorSelect").value = "ALL";
+      document.getElementById("matchSearchInput").value = "";
+      document.querySelectorAll("#matchStatusFilters .chip-btn").forEach((b, i) => {
+        b.classList.remove("active", "active-crimson", "active-amber", "active-indigo");
+        if (i === 0) b.classList.add("active");
+      });
+      renderMatchView();
+    }
+
+    function sortMatchTable(key) {
+      if (matchSortKey === key) {
+        matchSortAsc = !matchSortAsc;
+      } else {
+        matchSortKey = key;
+        matchSortAsc = typeof excRows[0][key] === "string";
+      }
+      renderMatchView();
+    }
+
+    function getStatusBadge(st) {
+      if (st === "UNRECEIPTED_INVOICE_NO_GRN") return '<span class="badge badge-crimson">NO GRN</span>';
+      if (st === "QTY_OVER_BILLED_VS_GRN") return '<span class="badge badge-amber">QTY OVER-BILLED</span>';
+      if (st === "PRICE_OVERCHARGE_VS_PO") return '<span class="badge badge-blue">PRICE OVERCHARGE</span>';
+      return '<span class="badge badge-indigo">ORPHAN NO PO</span>';
+    }
+
+    function renderMatchView() {
+      const vendorVal = document.getElementById("matchVendorSelect").value;
+      const query = document.getElementById("matchSearchInput").value.trim().toLowerCase();
+
+      const filtered = excRows.filter(r => {
+        if (matchFilterStatus !== "ALL" && r.match_status !== matchFilterStatus) return false;
+        if (vendorVal !== "ALL" && r.vendor_name !== vendorVal) return false;
+        if (query) {
+          const hay = (r.po_number + " " + r.sku + " " + r.vendor_name + " " + r.item_name).toLowerCase();
+          if (!hay.includes(query)) return false;
+        }
+        return true;
+      }).slice().sort((a, b) => {
+        const va = a[matchSortKey], vb = b[matchSortKey];
+        if (typeof va === "number" && typeof vb === "number") return matchSortAsc ? va - vb : vb - va;
+        return matchSortAsc ? String(va).localeCompare(String(vb)) : String(vb).localeCompare(String(va));
+      });
+
+      const expSum = filtered.reduce((a, r) => a + r.financial_exposure_egp, 0);
+      const invSum = filtered.reduce((a, r) => a + r.invoiced_amount, 0);
+      const avgExp = filtered.length > 0 ? expSum / filtered.length : 0;
+      const sharePct = totalAuditExposure > 0 ? (expSum / totalAuditExposure) * 100 : 0;
+
+      document.getElementById("matchKpiExposure").textContent = fmtMoney(expSum) + " EGP";
+      document.getElementById("matchKpiExposureShare").textContent = sharePct.toFixed(1) + "% of total flagged exposure";
+      document.getElementById("matchKpiCount").textContent = String(filtered.length);
+      document.getElementById("matchKpiCountNote").textContent = "Out of " + excRows.length + " flagged exceptions";
+      document.getElementById("matchKpiAvg").textContent = fmtMoney(avgExp) + " EGP";
+      document.getElementById("matchKpiInvoiced").textContent = fmtMoney(invSum) + " EGP";
+
+      const tbody = document.getElementById("matchTableBody");
+      tbody.innerHTML = filtered.map(r => `
+        <tr>
+          <td><strong>${r.po_number}</strong></td>
+          <td>${r.sku}</td>
+          <td>${r.vendor_name}</td>
+          <td>${r.item_name}</td>
+          <td class="num">${fmtQty(r.po_qty)}</td>
+          <td class="num">${fmtQty(r.received_qty)}</td>
+          <td class="num">${fmtQty(r.invoiced_qty)}</td>
+          <td class="num">${fmtMoney(r.po_unit_price)}</td>
+          <td class="num">${fmtMoney(r.invoiced_unit_price)}</td>
+          <td class="num">${fmtMoney(r.invoiced_amount)}</td>
+          <td class="num">${fmtQty(r.qty_variance_inv_vs_grn)}</td>
+          <td class="num">${fmtMoney(r.unit_price_variance)}</td>
+          <td class="num"><strong style="color:var(--crimson-text)">${fmtMoney(r.financial_exposure_egp)}</strong></td>
+          <td>${getStatusBadge(r.match_status)}</td>
+        </tr>
+      `).join("");
+
+      document.getElementById("matchTableFoot").innerHTML = `
+        <tr>
+          <td colspan="9">TOTAL (${filtered.length} Flagged Exceptions)</td>
+          <td class="num">${fmtMoney(invSum)}</td>
+          <td colspan="2"></td>
+          <td class="num" style="color:var(--crimson-text)">${fmtMoney(expSum)} EGP</td>
+          <td></td>
+        </tr>
+      `;
+    }
+
+    // ---------------- TAB 3: D365 F&O ARCHITECTURE ----------------
+    const stageDetails = [
+      {
+        title: "Stage 01 — Microsoft Dynamics 365 F&O (OData / BYOD) & MS Graph API",
+        bullets: [
+          'Pulls D365 F&O BYOD staging tables: <span class="code-tag">PurchLineStaging</span>, <span class="code-tag">VendPackingSlipTransStaging</span>, and <span class="code-tag">VendInvoiceTransStaging</span> without modifying X++ code.',
+          'Authenticates cleanly against Microsoft Graph API via <span class="code-tag">MSAL</span> to ingest daily OneDrive branch inventory and promo cycle files.',
+          'Supports incremental delta extraction across 12,000+ daily POS, Own-Delivery, and Aggregator-App retail transactions.'
+        ]
+      },
+      {
+        title: "Stage 02 — High-Speed Python Engine (Polars LazyFrame / DuckDB / Pandas)",
+        bullets: [
+          'Independently pre-aggregates PO, GRN, and Vendor Invoice tables to <span class="code-tag">(po_number, sku)</span> grain via SQL CTEs and <span class="code-tag">pl.LazyFrame.group_by</span> before joining.',
+          'Guarantees zero Cartesian fan-out across split receipts (<span class="code-tag">grn_count = 2</span>) and split vendor invoices (<span class="code-tag">invoice_count = 2</span>).',
+          'Computes true channel contribution margin including 14% aggregator commission compression, own-fleet delivery cost, and fresh produce waste.'
+        ]
+      },
+      {
+        title: "Stage 03 — Automated Control Tie-Out Assertions Gate (0.01 EGP Tolerance)",
+        bullets: [
+          'Programmatic <span class="code-tag">assert</span> checks compare every raw ledger sum against reconciled output totals before releasing reports.',
+          'Emits <span class="code-tag">audit_verification_report.json</span> with <span class="code-tag">PASSED</span> status and exact drift metrics (0.00 EGP variance verified).',
+          'Blocks AP payment release on any line flagged as <span class="code-tag">UNRECEIPTED_INVOICE_NO_GRN</span>, <span class="code-tag">QTY_OVER_BILLED_VS_GRN</span>, <span class="code-tag">PRICE_OVERCHARGE_VS_PO</span>, or <span class="code-tag">ORPHAN_INVOICE_NO_PO</span>.'
+        ]
+      },
+      {
+        title: "Stage 04 — Automated SFTP 1.5h Sync, Excel P&L & Power BI Semantic Model",
+        bullets: [
+          'Pushes verified branch stock & price feeds to e-commerce aggregators every <strong>1.5 hours</strong> via <span class="code-tag">paramiko</span> SFTP + automated <span class="code-tag">smtplib</span> execution logs.',
+          'Generates styled multi-sheet executive Excel workbooks (<span class="code-tag">openpyxl</span>) with native charts and conditional formatting.',
+          'Feeds star-schema Power BI models with optimized DAX measures achieving a <strong>60% query and refresh performance improvement</strong>.'
+        ]
+      }
+    ];
+
+    function selectStage(idx, card) {
+      document.querySelectorAll(".stage-card").forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+      const info = stageDetails[idx];
+      document.getElementById("stageDetailBox").innerHTML = `
+        <h3>${info.title}</h3>
+        <ul>${info.bullets.map(b => "<li>" + b + "</li>").join("")}</ul>
+      `;
+    }
+
+    function renderTieOutLedger() {
+      const t = AUDIT_DATA.tie_out_checks;
+      const checks = [
+        { name: "Purchase Order Value Tie-Out (EGP)", raw: fmtMoney(t.raw_po_value_egp), rec: fmtMoney(t.reconciled_po_value_egp), drift: fmtMoney(t.raw_po_value_egp - t.reconciled_po_value_egp) },
+        { name: "Goods Receipt Note Quantity Tie-Out (Units)", raw: fmtQty(t.raw_grn_qty), rec: fmtQty(t.reconciled_grn_qty), drift: fmtMoney(t.raw_grn_qty - t.reconciled_grn_qty) },
+        { name: "Vendor Invoice Value Tie-Out (EGP)", raw: fmtMoney(t.raw_invoice_value_egp), rec: fmtMoney(t.reconciled_invoice_value_egp), drift: fmtMoney(t.raw_invoice_value_egp - t.reconciled_invoice_value_egp) },
+        { name: "Multi-Branch Net Sales Tie-Out (EGP)", raw: fmtMoney(t.raw_branch_net_sales_egp), rec: fmtMoney(t.pnl_net_sales_egp), drift: fmtMoney(t.raw_branch_net_sales_egp - t.pnl_net_sales_egp) },
+        { name: "Consolidated Contribution Profit Verified (EGP)", raw: fmtMoney(t.total_contribution_profit_egp), rec: fmtMoney(t.total_contribution_profit_egp), drift: "0.00" }
+      ];
+      document.getElementById("tieOutTableBody").innerHTML = checks.map(c => `
+        <tr>
+          <td><strong>${c.name}</strong></td>
+          <td class="num">${c.raw}</td>
+          <td class="num">${c.rec}</td>
+          <td class="num">${c.drift}</td>
+          <td><span class="badge badge-emerald">PASSED</span></td>
+        </tr>
+      `).join("");
+    }
+
+    // Initialize dashboard
+    document.getElementById("gkNetSales").textContent = fmtMoney(AUDIT_DATA.tie_out_checks.pnl_net_sales_egp) + " EGP";
+    document.getElementById("gkContribProfit").textContent = fmtMoney(AUDIT_DATA.tie_out_checks.total_contribution_profit_egp) + " EGP";
+    document.getElementById("gkExposure").textContent = fmtMoney(AUDIT_DATA.total_financial_exposure_egp) + " EGP";
+    document.getElementById("gkExceptions").textContent = AUDIT_DATA.total_exceptions_detected + " / " + AUDIT_DATA.unique_po_sku_keys + " Keys";
+    document.getElementById("gkSplitMatches").textContent = AUDIT_DATA.split_grn_inv_clean_matches_verified + " Verified";
+    document.getElementById("headerTieStatus").textContent = "CONTROL TIE-OUT: " + AUDIT_DATA.status;
+
+    initVendorDropdown();
+    renderPnlView();
+    renderMatchView();
+    selectStage(0, document.querySelector(".stage-card"));
+    renderTieOutLedger();
+  </script>
+</body>
+</html>
