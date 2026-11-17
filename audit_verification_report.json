@@ -37,7 +37,7 @@
       "consignment_vendor_claim_egp": 969582.05,
       "consignment_authorized_payable_egp": 934049.0,
       "consignment_blocked_overclaim_egp": 35533.05,
-      "workbook_bytes": 17110
+      "workbook_bytes": 17390
     },
     "case_study_4_aggregator_sync_and_produce": {
       "status": "PASSED",
@@ -55,7 +55,7 @@
       "produce_accounted_kg": 7301.33,
       "produce_mass_balance_drift_kg": 0.0,
       "produce_unexplained_shrinkage_egp": 7291.01,
-      "workbook_bytes": 16047
+      "workbook_bytes": 16267
     },
     "case_study_5_promo_roi_and_dax_benchmark": {
       "status": "PASSED",
@@ -67,16 +67,18 @@
       "value_destroying_promos_count": 14,
       "value_destroying_erosion_egp": 75485.28,
       "benchmark_rows_tested": 30000,
-      "benchmark_slow_ms": 10.28,
-      "benchmark_fast_ms": 3.27,
-      "benchmark_speedup_pct": 68.22,
+      "benchmark_slow_ms": 8.83,
+      "benchmark_fast_ms": 2.67,
+      "benchmark_speedup_pct": 69.78,
       "benchmark_numerical_drift_egp": 0.0,
-      "workbook_bytes": 13085
+      "workbook_bytes": 13339
     },
     "case_study_6_delivery_channel_pnl_11branches": {
       "status": "PASSED",
       "workbook": "d:\\my-bussines-plan\\portfolio_engine\\output\\Portfolio_6_Delivery_Channel_PnL_11Branches.xlsx",
-      "workbook_bytes": 97503,
+      "workbook_bytes": 97685,
+      "excel_formulas_verified": 2801,
+      "excel_formula_errors": 0,
       "branches_count": 11,
       "channels_active": [
         "Mobile App",
@@ -94,9 +96,7 @@
       "avg_basket_egp": 407.53,
       "loss_making_cells_count": 4,
       "loss_making_branches_count": 2,
-      "tie_out_drift_egp": 0.0,
-      "excel_formulas_verified": 2801,
-      "excel_formula_errors": 0
+      "tie_out_drift_egp": 0.0
     }
   }
 }
