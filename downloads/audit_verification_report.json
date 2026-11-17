@@ -72,6 +72,30 @@
       "benchmark_speedup_pct": 71.72,
       "benchmark_numerical_drift_egp": 0.0,
       "workbook_bytes": 12828
+    },
+    "case_study_6_delivery_channel_pnl_11branches": {
+      "status": "PASSED",
+      "branches_count": 11,
+      "channels_active": [
+        "Mobile App",
+        "InstaShop",
+        "Hotline",
+        "Talabat"
+      ],
+      "data_rows_count": 2088,
+      "excel_formulas_verified": 2801,
+      "excel_formula_errors": 0,
+      "consolidated_net_sales_egp": 8010387.48,
+      "consolidated_gross_margin_egp": 2008506.02,
+      "consolidated_total_expenses_egp": 1701379.26,
+      "consolidated_profit_egp": 307126.76,
+      "consolidated_profit_pct": 3.83,
+      "consolidated_orders": 19656,
+      "avg_basket_egp": 407.53,
+      "loss_making_cells_count": 4,
+      "loss_making_branches_count": 2,
+      "tie_out_drift_egp": 0.0,
+      "workbook_bytes": 97316
     }
   }
 }
